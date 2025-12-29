@@ -335,7 +335,35 @@ e) The Consumer Protection Act, 2019 for consumer-facing applications
 f) The Indian Penal Code, 1860, particularly Sections 43, 43A, and 66 related to computer offenses
 g) Any other applicable central or state laws and regulations
 
-13.2 Export Control
+13.2 AI-Generated Code and Machine Learning
+
+When using AI-generated code or machine learning tools in conjunction with this Software:
+
+a) All AI-generated code incorporated into the Software or Derivative Works must comply with the Copyright Act, 1957 (India), including provisions regarding authorship and originality
+b) You must verify that AI-generated code does not infringe upon existing copyrights or violate the intellectual property rights of third parties
+c) You must disclose the use of AI tools in generating significant portions of code, as transparency is essential for attribution and compliance
+d) AI-generated code must not be used to circumvent the copyleft requirements or other obligations of this license
+e) You remain fully responsible for all code in your Derivative Works, regardless of whether it was human-written or AI-generated
+f) Any training of AI models on this Software must comply with this license and respect the copyleft provisions
+g) AI models trained on this Software or Derivative Works must not be used to generate proprietary code that violates the terms of this license
+
+13.3 Plagiarism and Attribution
+
+To prevent plagiarism and ensure proper attribution as required under Indian law:
+
+a) All contributions must be original work or properly licensed from third parties with appropriate attribution as required under Section 57 of the Copyright Act, 1957 (India)
+b) You must not copy code from other sources without proper licensing rights and attribution
+c) You must maintain clear records of code provenance, including sources of third-party code and licenses
+d) Plagiarism of code, documentation, or other materials may constitute copyright infringement under the Copyright Act, 1957 (India) and may result in civil and criminal liability under Sections 63, 63A, and 63B of the Act
+e) All redistributions must maintain proper attribution chains, clearly identifying original authors and subsequent contributors
+f) If you incorporate code from other FOSS projects, you must:
+   i) Verify license compatibility with the 4License
+   ii) Maintain original copyright notices and attributions
+   iii) Document the source and license of incorporated code
+   iv) Ensure compliance with the original license terms
+g) False attribution or misrepresentation of authorship may constitute fraud under the Indian Penal Code, 1860 and copyright infringement under the Copyright Act, 1957 (India)
+
+13.4 Export Control
 
 Distribution of this Software may be subject to the provisions of the Information Technology Act, 2000 and any export control laws of India or other applicable jurisdictions. Users are responsible for compliance with such laws.
 
@@ -347,9 +375,9 @@ To apply the 4License to your software:
 2. Add this header to each source file:
 
 Copyright (c) [YEAR] [YOUR NAME/ORGANIZATION]
-Licensed under the 4License v2.0
+Licensed under the 4License
 See LICENSE file for full terms
-SPDX-License-Identifier: 4License-2.0
+SPDX-License-Identifier: 4License
 
 3. Document clearly:
    - How to self-host the Software
