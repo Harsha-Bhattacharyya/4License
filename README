@@ -6,3 +6,54 @@ Governed by clear definitions and strong copyleft protections.
 
 Copyright (c) 2026 4India
 Licensed under the 4License
+
+## Translation Script
+
+This repository includes a translation script (`translate.sh`) that can translate the LICENSE.en-US file into multiple languages using the lingo.dev API.
+
+### Supported Languages
+
+The script supports:
+- All 22 major Indian constitutional languages (Schedule VIII)
+- 18 recommended international languages
+
+### Usage
+
+1. Display help and list all supported languages:
+   ```bash
+   ./translate.sh help
+   ```
+
+2. Translate to a specific language:
+   ```bash
+   ./translate.sh translate [LANG_CODE] > [OUTPUT_FILE]
+   ```
+
+### Examples
+
+```bash
+# Translate to Hindi
+./translate.sh translate hi > LICENSE.hi
+
+# Translate to French
+./translate.sh translate fr > LICENSE.fr
+
+# Translate to Chinese (Simplified)
+./translate.sh translate zh-CN > LICENSE.zh-CN
+```
+
+### Requirements
+
+- `curl` - for making API requests
+- `jq` - for JSON parsing
+- `LINGO_API_KEY` environment variable - obtain from https://lingo.dev
+
+Set your API key:
+```bash
+export LINGO_API_KEY='your-api-key-here'
+```
+
+### Note
+
+The script is ready for use with lingo.dev API. If you need to use an alternative translation service, you can modify the `translate_with_lingo()` function in the script to work with your preferred provider (Google Translate API, DeepL, LibreTranslate, etc.).
+
