@@ -2,11 +2,24 @@
 
 # 4License Translation Script using lingo.dev
 # This script translates the LICENSE.en-US file into various languages
+#
+# CONFIGURATION REQUIRED:
+# This script is ready for integration with lingo.dev API. Before using:
+# 1. Obtain an API key from https://lingo.dev
+# 2. Verify the API endpoint URL and request/response format from lingo.dev docs
+# 3. Update LINGO_API_URL if needed (currently set to placeholder)
+# 4. Update the JSON request structure if needed (see translate_with_lingo function)
+# 5. Update the response parsing if needed (see translate_with_lingo function)
+#
+# ALTERNATIVE USAGE:
+# The script can be adapted to work with other translation services by modifying
+# the translate_with_lingo() function to match your chosen API.
 
 set -euo pipefail
 
 SCRIPT_NAME=$(basename "$0")
 SOURCE_FILE="LICENSE.en-US"
+# TODO: Verify this is the correct lingo.dev API endpoint
 LINGO_API_URL="https://api.lingo.dev/v1/translate"
 
 # Define all supported languages with their ISO codes and names
@@ -158,9 +171,10 @@ translate_with_lingo() {
         exit 1
     fi
     
-    # Basic API key format validation
-    if [[ ! "$LINGO_API_KEY" =~ ^[a-zA-Z0-9_-]{20,}$ ]]; then
-        echo "Warning: API key format appears unusual. Typical API keys are 20+ alphanumeric characters." >&2
+    # Basic API key format validation (flexible to accommodate various formats)
+    # API keys typically contain alphanumeric characters, underscores, hyphens, or periods
+    if [[ ${#LINGO_API_KEY} -lt 10 ]]; then
+        echo "Warning: API key seems unusually short (less than 10 characters)." >&2
         echo "Proceeding anyway, but if you get authentication errors, verify your key." >&2
         echo "" >&2
     fi
@@ -185,9 +199,14 @@ translate_with_lingo() {
         '{source_language: $src, target_language: $tgt, text: $txt}')
     
     # Call lingo.dev API
-    # NOTE: The actual lingo.dev API endpoint and response format should be verified
-    # from the official documentation at https://lingo.dev/docs
-    # This implementation assumes a standard translation API format.
+    # IMPORTANT: This implementation is based on common translation API patterns.
+    # Before using in production, verify the actual lingo.dev API specification at:
+    # https://lingo.dev/docs or https://api.lingo.dev/docs
+    # You may need to adjust:
+    # - The API endpoint URL (currently using placeholder)
+    # - The request payload structure
+    # - The authentication method
+    # - The response field names
     local response
     response=$(curl -s -X POST "$LINGO_API_URL" \
         -H "Authorization: Bearer $LINGO_API_KEY" \
@@ -210,9 +229,12 @@ translate_with_lingo() {
     fi
     
     # Parse and return the translated text
-    # NOTE: This assumes the API returns JSON with standard field names like:
-    # - "translated_text" or "translation" for the translated content
-    # Verify the actual field names from lingo.dev API documentation
+    # IMPORTANT: This tries multiple common response field names used by translation APIs:
+    # - "translated_text" (common in many APIs)
+    # - "translation" (used by some services)
+    # - "result" (used by some services)
+    # - "data.translation" (nested structure)
+    # Verify the actual response structure from lingo.dev documentation and adjust as needed.
     local translated_text
     translated_text=$(echo "$response" | jq -r '.translated_text // .translation // .result // .data.translation // empty')
     
@@ -227,7 +249,10 @@ translate_with_lingo() {
         echo "  3. The language code '$target_lang' is not supported by lingo.dev" >&2
         echo "  4. The API endpoint or authentication is incorrect" >&2
         echo "" >&2
-        echo "Please consult https://lingo.dev/docs for the correct API format." >&2
+        echo "NEXT STEPS:" >&2
+        echo "  1. Check the API response above for error messages" >&2
+        echo "  2. Consult https://lingo.dev/docs for the correct API format" >&2
+        echo "  3. Update the script's response parsing to match the actual API" >&2
         exit 1
     fi
     
