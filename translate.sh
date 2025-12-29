@@ -158,6 +158,13 @@ translate_with_lingo() {
         exit 1
     fi
     
+    # Basic API key format validation
+    if [[ ! "$LINGO_API_KEY" =~ ^[a-zA-Z0-9_-]{20,}$ ]]; then
+        echo "Warning: API key format appears unusual. Typical API keys are 20+ alphanumeric characters." >&2
+        echo "Proceeding anyway, but if you get authentication errors, verify your key." >&2
+        echo "" >&2
+    fi
+    
     # Check if required tools are available
     if ! command -v curl &> /dev/null; then
         echo "Error: curl is required but not installed." >&2
@@ -178,7 +185,9 @@ translate_with_lingo() {
         '{source_language: $src, target_language: $tgt, text: $txt}')
     
     # Call lingo.dev API
-    # The API endpoint and format may need to be adjusted based on actual lingo.dev specifications
+    # NOTE: The actual lingo.dev API endpoint and response format should be verified
+    # from the official documentation at https://lingo.dev/docs
+    # This implementation assumes a standard translation API format.
     local response
     response=$(curl -s -X POST "$LINGO_API_URL" \
         -H "Authorization: Bearer $LINGO_API_KEY" \
@@ -201,9 +210,11 @@ translate_with_lingo() {
     fi
     
     # Parse and return the translated text
-    # This assumes the API returns JSON with a "translated_text" or "translation" field
+    # NOTE: This assumes the API returns JSON with standard field names like:
+    # - "translated_text" or "translation" for the translated content
+    # Verify the actual field names from lingo.dev API documentation
     local translated_text
-    translated_text=$(echo "$response" | jq -r '.translated_text // .translation // empty')
+    translated_text=$(echo "$response" | jq -r '.translated_text // .translation // .result // .data.translation // empty')
     
     # If jq fails or returns empty, show error
     if [[ -z "$translated_text" ]]; then
@@ -211,9 +222,12 @@ translate_with_lingo() {
         echo "API Response: $response" >&2
         echo "" >&2
         echo "This could mean:" >&2
-        echo "  1. The API returned an error" >&2
+        echo "  1. The API returned an error (check the response above)" >&2
         echo "  2. The response format is different than expected" >&2
         echo "  3. The language code '$target_lang' is not supported by lingo.dev" >&2
+        echo "  4. The API endpoint or authentication is incorrect" >&2
+        echo "" >&2
+        echo "Please consult https://lingo.dev/docs for the correct API format." >&2
         exit 1
     fi
     
