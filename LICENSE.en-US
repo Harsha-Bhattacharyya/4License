@@ -1,0 +1,362 @@
+4License
+
+Copyright (c) 2026 4India
+
+This program is free software: you can redistribute it and/or modify it under the terms of the 4License as published by 4India. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 4License for more details.
+
+PREAMBLE
+
+This license ensures software freedom, user rights, and sustainable development. It combines permissive usage with strong copyleft protections, ensuring that improvements benefit everyone while preventing vendor lock-in and feature degradation.
+
+1. DEFINITIONS
+
+"Software" means the original work licensed under this license, including source code, documentation, and associated materials.
+
+"Derivative Work" means any modification, enhancement, translation, or work based on the Software.
+
+"Distribution" means providing the Software or Derivative Works to others, whether for free or for payment.
+
+"Self-Hostable" means the ability to install, run, and maintain the Software on infrastructure you control, without requiring external services or vendor approval.
+
+"Source Code" means the preferred form for making modifications, including build scripts, configuration files, and installation instructions.
+
+"SaaS" (Software as a Service) means providing the Software's functionality over a network without distributing copies to users.
+
+"Freemium Model" means offering a base version for free with optional paid upgrades or features.
+
+"FOSS" (Free and Open Source Software) means software with licenses approved by the Open Source Initiative or Free Software Foundation.
+
+2. GRANT OF RIGHTS
+
+You are granted the following rights, subject to the conditions below:
+
+2.1 Usage Rights
+- Use the Software for any purpose, commercial or non-commercial
+- Run the Software on any number of devices or servers
+- Use the Software in production environments
+
+2.2 Modification Rights
+- Modify the Software to suit your needs
+- Improve, enhance, or fix bugs in the Software
+- Combine the Software with other works
+
+2.3 Distribution Rights
+- Copy and distribute the Software
+- Publish the Software on any platform
+- Sublicense the Software to others under this license
+- Sell copies or services related to the Software
+
+2.4 Patent Grant
+Any contributor grants you a worldwide, royalty-free, non-exclusive patent license to use, make, have made, sell, and import the Software. This license covers all patent claims that the contributor can license and that are necessarily infringed by the Software. This grant is subject to the Patents Act, 1970 (India) and equivalent patent laws in other jurisdictions.
+
+3. CONDITIONS AND REQUIREMENTS
+
+3.1 Source Code Retention (for Source Distribution)
+
+When you distribute the Software's source code, you must:
+
+a) Keep the original copyright notice intact as required under Section 57 of the Copyright Act, 1957 (India)
+b) Include this complete license text
+c) Keep all warranty disclaimers
+d) Credit the original authors
+e) Document any changes you made with dates
+
+3.2 Binary Distribution Notice
+
+When you distribute compiled or binary versions, you must:
+
+a) Include this license in the documentation or a LICENSE file
+b) Reproduce the copyright notice in user-visible documentation as required under the Copyright Act, 1957 (India)
+c) Provide clear instructions on how to obtain the source code
+d) Include all warranty disclaimers
+
+3.3 Strong Copyleft Requirement
+
+This is the most important requirement:
+
+a) All Derivative Works must be licensed under the 4License (this license)
+b) You must make the complete source code publicly available when you distribute any version
+c) The source code must be accessible from a public repository or website
+d) You cannot add additional restrictions that limit the rights granted here
+e) If you offer the Software as a service (SaaS), you must make the complete source code available to all users
+
+3.4 Feature Perpetuity Guarantee
+
+All features must remain accessible forever:
+
+a) Any feature you add to a Derivative Work must remain available in all future versions
+b) Features cannot be removed, paywalled after being free, or artificially degraded
+c) Users must be able to access all historical features in your fork
+d) This applies to functionality, not specific implementations (you can refactor, but must maintain capability)
+
+4. SELF-HOSTING MANDATE
+
+4.1 Core Requirement
+
+The Software and all Derivative Works must be fully self-hostable:
+
+a) Users must be able to install and run the entire Software on their own infrastructure
+b) No features can require connection to vendor-controlled servers for core functionality
+c) All APIs, databases, and services must have self-hostable alternatives
+d) Complete installation documentation must be provided
+
+4.2 Development Requirements
+
+Development must avoid vendor lock-in:
+
+a) Use only FOSS dependencies (libraries, frameworks, tools)
+b) Avoid proprietary development tools or platforms
+c) Do not require proprietary services for building or testing
+d) Provide reproducible build instructions
+
+4.3 Exception for SaaS Offerings
+
+If you offer the Software as a hosted service (SaaS):
+
+a) You are exempt from the self-hosting requirement for your hosted offering
+b) However, you must still provide self-hostable versions to users who want them
+c) The self-hostable version must have feature parity with your SaaS offering
+d) Users must be able to migrate their data from your SaaS to self-hosted instances
+
+5. FREEMIUM MODEL PROTECTIONS
+
+5.1 Free Tier Permanence
+
+If you adopt a freemium business model:
+
+a) All features that are ever free must remain free forever
+b) You cannot later move free features to paid tiers
+c) This requirement applies to all Derivative Works and future versions
+d) Free tier capacity can be limited, but feature access cannot
+e) Any change in free tier features may be subject to the Consumer Protection Act, 2019 (India) and constitute unfair trade practice
+
+5.2 Trial Prohibition
+
+Time-limited trials are not permitted:
+
+a) You cannot offer full features for a limited time then require payment
+b) Features must be either free forever or paid from the start
+c) This prevents bait-and-switch tactics that may violate the Consumer Protection Act, 2019 (India)
+
+5.3 Demo Exception
+
+Limited demonstrations are allowed:
+
+a) You may offer specific, clearly-marked demos
+b) Demos must be explicitly labeled as demonstrations, not trials
+c) Demos can have limited functionality to showcase specific features
+d) Demos must not have time limits
+
+6. SOVEREIGNTY AND ETERNAL ACCESS
+
+6.1 User Rights to Access
+
+a) Users have the right to access all features they had access to, indefinitely
+b) Features cannot be remotely disabled or degraded over time
+c) Users must be able to use older versions without forced updates
+d) No "phone home" requirements that could disable functionality
+
+6.2 Data Sovereignty
+
+a) Users must be able to export all their data in standard formats as required under Section 11 of the Digital Personal Data Protection Act, 2023 (India)
+b) No proprietary lock-in of user data
+c) Data migration tools must be provided
+d) Users own all data they create using the Software
+
+7. PRIVACY AND ANALYTICS
+
+7.1 Permitted Analytics
+
+You may collect aggregate, anonymized usage telemetry for project improvement:
+
+a) Crash reports and error logs (without personal data)
+b) Feature usage statistics (anonymized and aggregated)
+c) Performance metrics
+d) General installation and deployment information
+
+7.2 Privacy Requirements
+
+All analytics must meet these strict requirements and comply with applicable data protection laws:
+
+a) Opt-in Only: Analytics must be disabled by default, requiring explicit user consent as mandated by Section 6 of the Digital Personal Data Protection Act, 2023 (India)
+b) No Personal Information: Cannot collect names, emails, IP addresses, or identifying data without explicit consent under the Digital Personal Data Protection Act, 2023 (India)
+c) Self-Hostable Disable: Users must be able to completely disable all telemetry and exercise their right to withdraw consent under Section 6 of the Digital Personal Data Protection Act, 2023 (India)
+d) Auditable Collection: Analytics collection code must be open source and auditable
+e) Legal Compliance: Must comply with the Digital Personal Data Protection Act, 2023 (India), General Data Protection Regulation (EU) 2016/679 (GDPR), and similar privacy laws in applicable jurisdictions
+
+7.3 Transparency
+
+a) Clearly document what data is collected in accordance with Section 5 of the Digital Personal Data Protection Act, 2023 (India)
+b) Provide examples of collected data
+c) Explain how data is used and who can access it
+d) Allow users to view or delete their analytics data as per Section 12 of the Digital Personal Data Protection Act, 2023 (India)
+e) Maintain records of data processing activities if required under applicable law
+
+8. PATENT PROTECTION
+
+8.1 Patent Grant
+
+Contributors grant you broad patent rights:
+
+a) Worldwide, royalty-free patent license
+b) Covers all patent claims necessarily infringed by using the Software
+c) Allows making, using, selling, and distributing the Software
+d) Cannot be revoked as long as you comply with this license
+e) Subject to the Patents Act, 1970 (India) and equivalent patent laws
+
+8.2 Patent Retaliation
+
+If you sue anyone claiming the Software infringes your patents:
+
+a) Your patent license is immediately terminated
+b) Your license to use the Software continues for existing deployments
+c) You cannot distribute new versions until the lawsuit is withdrawn
+
+8.3 Trademark Exclusion
+
+This license does not grant:
+
+a) Rights to use trademarks, logos, or brand names protected under the Trade Marks Act, 1999 (India)
+b) The right to imply endorsement by original authors
+c) Any trademark licenses
+
+9. WARRANTY DISCLAIMER
+
+9.1 No Warranty
+
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT ANY WARRANTY:
+
+a) No guarantee it will work for your purposes
+b) No guarantee it is free from bugs or errors
+c) No guarantee of merchantability (fit for sale)
+d) No guarantee of fitness for a particular purpose
+e) No guarantee of non-infringement of third-party rights
+f) No guarantee of security or data protection
+
+This disclaimer is made to the fullest extent permitted under the Indian Contract Act, 1872 and applicable law.
+
+9.2 Your Responsibility
+
+a) You use the Software at your own risk
+b) You are responsible for testing and validation
+c) You are responsible for backup and disaster recovery
+d) You are responsible for security measures
+e) You are responsible for compliance with applicable laws and regulations
+
+10. LIMITATION OF LIABILITY
+
+10.1 No Liability for Damages
+
+Contributors and copyright holders are NOT liable for:
+
+a) Direct damages from using the Software
+b) Indirect or consequential damages
+c) Loss of profits, data, or business opportunities
+d) System failures or downtime
+e) Security breaches or data loss
+f) Any damages exceeding the amount you paid for the Software (if anything)
+
+This limitation applies to the fullest extent permitted under the Indian Contract Act, 1872, the Information Technology Act, 2000, and applicable law.
+
+10.2 Legal Maximum
+
+Some jurisdictions don't allow limiting liability. In those cases:
+
+a) Liability is limited to the maximum extent permitted by law
+b) Mandatory consumer protections under the Consumer Protection Act, 2019 (India) still apply where legally required
+c) Nothing in this license excludes liability for death or personal injury caused by negligence, fraud, or fraudulent misrepresentation
+
+11. TERMINATION
+
+11.1 Automatic Termination
+
+Your license automatically ends if you:
+
+a) Violate any term of this license
+b) Sue claiming the Software infringes your patents
+c) Fail to make source code available as required
+d) Add restrictions that conflict with this license
+e) Infringe the copyright as defined under the Copyright Act, 1957 (India)
+
+11.2 Reinstatement
+
+If you violate the license:
+
+a) You have 60 days to correct the violation after being notified
+b) If corrected within 60 days, your license is automatically reinstated
+c) If not corrected, your license ends permanently
+d) Others who received the Software from you are not affected
+
+12. GENERAL PROVISIONS
+
+12.1 License Compatibility
+
+This license is intentionally designed to be compatible with:
+
+a) GPL v3 or later (for copyleft projects)
+b) AGPL v3 or later (for network services)
+c) Similar strong copyleft licenses
+
+However, you cannot combine this Software with proprietary software in a way that circumvents the copyleft requirements.
+
+12.2 Severability
+
+If any part of this license is found unenforceable:
+
+a) The rest of the license remains in effect
+b) The unenforceable part is modified minimally to make it enforceable
+c) The intent of the license is preserved
+
+12.3 No Waiver
+
+Failure to enforce any provision doesn't waive the right to enforce it later.
+
+12.4 Entire Agreement
+
+This license is the complete agreement regarding the Software. No other promises or terms apply unless in writing and signed by the copyright holder.
+
+12.5 Governing Law and Jurisdiction
+
+a) This license is governed by the laws of India, including but not limited to the Copyright Act, 1957, the Information Technology Act, 2000, the Patents Act, 1970, the Trade Marks Act, 1999, the Digital Personal Data Protection Act, 2023, and the Indian Contract Act, 1872
+b) Any disputes arising from this license shall be subject to the exclusive jurisdiction of the courts in India
+c) The parties agree to submit to the jurisdiction of Indian courts without regard to conflict of law principles
+
+13. COMPLIANCE WITH INDIAN LAW
+
+13.1 Statutory Compliance
+
+Users and distributors must ensure compliance with:
+
+a) The Copyright Act, 1957 (India) for all copyright-related matters
+b) The Information Technology Act, 2000 and Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 for electronic records and data security
+c) The Digital Personal Data Protection Act, 2023 for processing of personal data
+d) The Patents Act, 1970 for patent-related matters
+e) The Consumer Protection Act, 2019 for consumer-facing applications
+f) The Indian Penal Code, 1860, particularly Sections 43, 43A, and 66 related to computer offenses
+g) Any other applicable central or state laws and regulations
+
+13.2 Export Control
+
+Distribution of this Software may be subject to the provisions of the Information Technology Act, 2000 and any export control laws of India or other applicable jurisdictions. Users are responsible for compliance with such laws.
+
+14. HOW TO APPLY THIS LICENSE
+
+To apply the 4License to your software:
+
+1. Include the full license text in a LICENSE file in your repository
+2. Add this header to each source file:
+
+Copyright (c) [YEAR] [YOUR NAME/ORGANIZATION]
+Licensed under the 4License v2.0
+See LICENSE file for full terms
+SPDX-License-Identifier: 4License-2.0
+
+3. Document clearly:
+   - How to self-host the Software
+   - What dependencies are required
+   - How to build from source
+   - What analytics (if any) are collected
+
+SPDX-License-Identifier: 4License
+
+END OF LICENSE
