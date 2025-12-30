@@ -1,8 +1,8 @@
 4License
 
-Copyright (c) 2026 4India
+Copyright (c) 2026 Harsha Bhattacharyya
 
-This program is free software: you can redistribute it and/or modify it under the terms of the 4License as published by 4India. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 4License for more details.
+This license is free software: you can redistribute it and/or modify it under the terms of the 4License as published by Harsha Bhattacharyya. This license is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 4License for more details.
 
 PREAMBLE
 
@@ -36,7 +36,7 @@ You are granted the following rights, subject to the conditions below:
 - Use the Software in production environments
 
 2.2 Modification Rights
-- Modify the Software to suit your needs
+- Modify the Software to suit your needs but they must be available to all.
 - Improve, enhance, or fix bugs in the Software
 - Combine the Software with other works
 
@@ -65,7 +65,7 @@ e) Document any changes you made with dates
 
 When you distribute compiled or binary versions, you must:
 
-a) Include this license in the documentation or a LICENSE file
+a) Include this license in the documentation or a LICENSE/COPYING file
 b) Reproduce the copyright notice in user-visible documentation as required under the Copyright Act, 1957 (India)
 c) Provide clear instructions on how to obtain the source code
 d) Include all warranty disclaimers
@@ -105,7 +105,7 @@ d) Complete installation documentation must be provided
 Development must avoid vendor lock-in:
 
 a) Use only FOSS dependencies (libraries, frameworks, tools)
-b) Avoid proprietary development tools or platforms
+b) Proprietary development tools or platforms are allowed
 c) Do not require proprietary services for building or testing
 d) Provide reproducible build instructions
 
@@ -114,7 +114,7 @@ d) Provide reproducible build instructions
 If you offer the Software as a hosted service (SaaS):
 
 a) You are exempt from the self-hosting requirement for your hosted offering
-b) However, you must still provide self-hostable versions to users who want them
+b) However, you are still advised to provide self-hostable versions to users
 c) The self-hostable version must have feature parity with your SaaS offering
 d) Users must be able to migrate their data from your SaaS to self-hosted instances
 
@@ -136,7 +136,7 @@ Time-limited trials are not permitted:
 
 a) You cannot offer full features for a limited time then require payment
 b) Features must be either free forever or paid from the start
-c) This prevents bait-and-switch tactics that may violate the Consumer Protection Act, 2019 (India)
+c) This is to prevent bait-and-switch tactics that may violate the Consumer Protection Act, 2019 (India)
 
 5.3 Demo Exception
 
@@ -167,7 +167,7 @@ d) Users own all data they create using the Software
 
 7.1 Permitted Analytics
 
-You may collect aggregate, anonymized usage telemetry for project improvement:
+You may collect aggregate, anonymized usage telemetry for project improvement as long as it is optional:
 
 a) Crash reports and error logs (without personal data)
 b) Feature usage statistics (anonymized and aggregated)
@@ -208,9 +208,8 @@ e) Subject to the Patents Act, 1970 (India) and equivalent patent laws
 
 If you sue anyone claiming the Software infringes your patents:
 
-a) Your patent license is immediately terminated
-b) Your license to use the Software continues for existing deployments
-c) You cannot distribute new versions until the lawsuit is withdrawn
+a) The lawsuit is immediately dismissed
+b) Your license to use the Software continues for existing and future deployments
 
 8.3 Trademark Exclusion
 
@@ -273,19 +272,20 @@ c) Nothing in this license excludes liability for death or personal injury cause
 Your license automatically ends if you:
 
 a) Violate any term of this license
-b) Sue claiming the Software infringes your patents
-c) Fail to make source code available as required
-d) Add restrictions that conflict with this license
-e) Infringe the copyright as defined under the Copyright Act, 1957 (India)
+b) Fail to make source code available as required
+c) Add restrictions that conflict with this license
+d) Infringe the copyright as defined under the Copyright Act, 1957 (India)
 
 11.2 Reinstatement
 
 If you violate the license:
 
-a) You have 60 days to correct the violation after being notified
-b) If corrected within 60 days, your license is automatically reinstated
-c) If not corrected, your license ends permanently
-d) Others who received the Software from you are not affected
+a) You have 7 business days to correct the violation after being notified
+b) If corrected within 7 business days, your license is automatically reinstated
+c) If not corrected within 7 business days, your license is temporarily suspended for 1 month
+d) If not corrected within that month, your license is permanently revoked
+e) If corrected within that month, your license is automatically reinstated
+e) Others who received the Software from you are not affected
 
 12. GENERAL PROVISIONS
 
