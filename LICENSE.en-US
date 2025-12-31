@@ -2,11 +2,11 @@
 
 Copyright (c) 2026 Harsha Bhattacharyya
 
-Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+Permission is granted to copy and distribute verbatim copies of this license document without modification. Changing this license text is not permitted.
 
 PREAMBLE
 
-This license ensures software freedom, user rights, and sustainable development. It combines permissive usage with strong copyleft protections, ensuring that improvements benefit everyone while preventing vendor lock-in and feature degradation.
+This license ensures software freedom, user rights, and sustainable development through strong copyleft protections that benefit all users while preventing vendor lock-in and feature degradation.
 
 1. DEFINITIONS
 
@@ -20,82 +20,80 @@ This license ensures software freedom, user rights, and sustainable development.
 
 "Source Code" means the preferred form for making modifications, including build scripts, configuration files, and installation instructions.
 
-"SaaS" (Software as a Service) means providing the Software's functionality over a network without distributing copies to users.
-
 "Freemium Model" means offering a base version for free with optional paid upgrades or features.
 
 "FOSS" (Free and Open Source Software) means software with licenses approved by the Open Source Initiative or Free Software Foundation.
 
 2. GRANT OF RIGHTS
 
-You are granted the following rights, subject to the conditions below:
+Subject to the conditions below, you are granted:
 
 2.1 Usage Rights
-- Use the Software for any purpose, commercial or non-commercial
-- Run the Software on any number of devices or servers
-- Use the Software in production environments
+- Use the Software for any lawful purpose
+- Operate the Software on any infrastructure
+- Deploy the Software in production environments
 
 2.2 Modification Rights
-- Modify the Software to suit your needs.
-- Improve, enhance, or fix bugs in the Software
-- Combine the Software with other works
+- Modify the Software as needed
+- Enhance or repair the Software
+- Integrate the Software with other works
 
 2.3 Distribution Rights
 - Copy and distribute the Software
 - Publish the Software on any platform
-- Sublicense the Software to others under this license
-- Sell copies or services related to the Software
+- Sublicense under this license
+- Commercialize the Software and related services
 
 2.4 Patent Grant
-Any contributor grants you a worldwide, royalty-free, non-exclusive patent license to use, make, have made, sell, and import the Software. This license covers all patent claims that the contributor can license and that are necessarily infringed by the Software. This grant is subject to the Patents Act, 1970 (India) and equivalent patent laws in other jurisdictions.
+Contributors grant a worldwide, royalty-free, non-exclusive patent license for use, manufacture, sale, and importation of the Software, covering all patent claims necessarily infringed by the Software. This grant is subject to the Patents Act, 1970 (India) and equivalent patent laws in other jurisdictions.
 
 3. CONDITIONS AND REQUIREMENTS
 
-3.1 Source Code Retention (for Source Distribution)
+3.1 Source Code Retention
 
-When you distribute the Software's source code, you must:
+When distributing source code, you must:
 
-a) Keep the original copyright notice intact as required under Section 57 of the Copyright Act, 1957 (India)
+a) Preserve the original copyright notice as required under Section 57 of the Copyright Act, 1957 (India)
 b) Include this complete license text
-c) Keep all warranty disclaimers
-d) Credit the original authors
-e) Document any changes you made with dates
+c) Maintain all warranty disclaimers
+d) Credit original authors
+e) Document modifications with dates
 
-3.2 Binary Distribution Notice
+3.2 Binary Distribution
 
-When you distribute compiled or binary versions, you must:
+When distributing compiled or binary versions, you must:
 
-a) Include this license in the documentation or a LICENSE/COPYING file
-b) Reproduce the copyright notice in user-visible documentation as required under the Copyright Act, 1957 (India)
-c) Provide clear instructions on how to obtain the source code
+a) Include this license in documentation or a LICENSE file
+b) Reproduce copyright notices in user documentation as required under the Copyright Act, 1957 (India)
+c) Provide instructions for obtaining source code
 d) Include all warranty disclaimers
 
-3.3 Strong Copyleft Requirement
+3.3 Copyleft Requirement
 
-This is the most important requirement:
+All Derivative Works must:
 
-a) All Derivative Works must be licensed under the 4License (this license)
-b) You must make the complete source code publicly available when you distribute any version
-c) The source code must be accessible from a public repository or website
-d) You cannot add additional restrictions that limit the rights granted here
+a) Be licensed under the 4License
+b) Have complete source code publicly available upon distribution
+c) Be accessible from a public repository or website
+d) Not impose additional restrictions limiting the rights granted herein
 
-3.4 Feature Perpetuity Guarantee
+3.4 Feature Perpetuity
 
-All features must remain accessible forever:
+All features must remain perpetually accessible:
 
-a) Any feature you add to a Derivative Work must remain available in all future versions
-b) Features cannot be removed, paywalled after being free, or artificially degraded
-c) Users must be able to access all historical features in your fork
-d) This applies to functionality, not specific implementations (you can refactor, but must maintain capability)
+a) Features added to Derivative Works must remain available in all subsequent versions
+b) Features shall not be removed, paywalled, or degraded
+c) Users must retain access to all historical features
+d) This applies to functionality, not specific implementations
 
 4. SELF-HOSTING MANDATE
 
 4.1 Core Requirement
 
-The Software and all Derivative Works must be fully self-hostable:
+The Software and all Derivative Works must be self-hostable:
 
-a) Users must be able to install and run the entire Software on their own infrastructure
-b) No features can require connection to vendor-controlled servers for core functionality
+a) Users must be able to install and operate the Software on their own infrastructure
+b) Core functionality shall not require connection to vendor-controlled servers
 c) All APIs, databases, and services must have self-hostable alternatives
 d) Complete installation documentation must be provided
 
@@ -103,8 +101,8 @@ d) Complete installation documentation must be provided
 
 Development must avoid vendor lock-in:
 
-a) Use only FOSS dependencies (libraries, frameworks, tools)
-b) Proprietary development tools or platforms are allowed
+a) Use only FOSS dependencies
+b) Proprietary development tools are permitted
 c) Do not require proprietary services for building or testing
 d) Provide reproducible build instructions
 
@@ -112,90 +110,90 @@ d) Provide reproducible build instructions
 
 5.1 Free Tier Permanence
 
-If you adopt a freemium business model:
+If adopting a freemium business model:
 
-a) All features that are ever free must remain free forever
-b) You cannot later move free features to paid tiers
+a) Features that are free must remain free perpetually
+b) Free features shall not be moved to paid tiers
 c) This requirement applies to all Derivative Works and future versions
-d) Free tier capacity can be limited, but feature access cannot
-e) Any change in free tier features may be subject to the Consumer Protection Act, 2019 (India) and constitute unfair trade practice
+d) Free tier capacity may be limited, but feature access shall not
+e) Changes to free tier features may constitute unfair trade practice under the Consumer Protection Act, 2019 (India)
 
 5.2 Trial Prohibition
 
-Time-limited trials are not permitted:
+Time-limited trials are prohibited:
 
-a) You cannot offer full features for a limited time then require payment
-b) Features must be either free forever or paid from the start
-c) This is to prevent bait-and-switch tactics that may violate the Consumer Protection Act, 2019 (India)
+a) Full features shall not be offered for limited time then require payment
+b) Features must be either free perpetually or paid from inception
+c) This prevents bait-and-switch tactics that may violate the Consumer Protection Act, 2019 (India)
 
-5.3 Demo Exception
+5.3 Demonstration Exception
 
-Limited demonstrations are allowed:
+Limited demonstrations are permitted:
 
-a) You may offer specific, clearly-marked demos
-b) Demos must be explicitly labeled as demonstrations, not trials
-c) Demos can have limited functionality to showcase specific features
-d) Demos must not have time limits
+a) Specific, clearly-marked demonstrations may be offered
+b) Demonstrations must be explicitly labeled, not as trials
+c) Demonstrations may have limited functionality to showcase features
+d) Demonstrations shall not have time limits
 
-6. SOVEREIGNTY AND ETERNAL ACCESS
+6. USER SOVEREIGNTY AND PERPETUAL ACCESS
 
-6.1 User Rights to Access
+6.1 Access Rights
 
-a) Users have the right to access all features they had access to, indefinitely
-b) Features cannot be remotely disabled or degraded over time
+a) Users have the right to access all previously accessible features indefinitely
+b) Features shall not be remotely disabled or degraded
 c) Users must be able to use older versions without forced updates
 
 6.2 Data Sovereignty
 
-a) Users must be able to export all their data in standard formats as required under Section 11 of the Digital Personal Data Protection Act, 2023 (India)
-b) No proprietary lock-in of user data
+a) Users must be able to export all data in standard formats as required under Section 11 of the Digital Personal Data Protection Act, 2023 (India)
+b) Proprietary lock-in of user data is prohibited
 c) Data migration tools must be provided
-d) Users own all data they create using the Software
+d) Users own all data created using the Software
 
 7. PRIVACY AND ANALYTICS
 
 7.1 Permitted Analytics
 
-You may collect aggregate, anonymized usage telemetry for project improvement as long as it is optional:
+Optional, aggregate, anonymized usage telemetry for project improvement may include:
 
-a) Crash reports and error logs (without personal data)
-b) Feature usage statistics (anonymized and aggregated)
+a) Crash reports and error logs without personal data
+b) Feature usage statistics, anonymized and aggregated
 c) Performance metrics
 d) General installation and deployment information
 
 7.2 Privacy Requirements
 
-All analytics must meet these strict requirements and comply with applicable data protection laws:
+All analytics must comply with applicable data protection laws:
 
 a) Opt-in Only: Analytics must be disabled by default, requiring explicit user consent as mandated by Section 6 of the Digital Personal Data Protection Act, 2023 (India)
-b) No Personal Information: Cannot collect names, emails, IP addresses, or identifying data without explicit consent under the Digital Personal Data Protection Act, 2023 (India)
+b) No Personal Information: Names, emails, IP addresses, or identifying data shall not be collected without explicit consent under the Digital Personal Data Protection Act, 2023 (India)
 c) Self-Hostable Disable: Users must be able to completely disable all telemetry and exercise their right to withdraw consent under Section 6 of the Digital Personal Data Protection Act, 2023 (India)
 d) Auditable Collection: Analytics collection code must be open source and auditable
-e) Legal Compliance: Must comply with the Digital Personal Data Protection Act, 2023 (India), General Data Protection Regulation (EU) 2016/679 (GDPR), and similar privacy laws in applicable jurisdictions
+e) Legal Compliance: Must comply with the Digital Personal Data Protection Act, 2023 (India), General Data Protection Regulation (EU) 2016/679 (GDPR), and similar privacy laws
 
 7.3 Transparency
 
-a) Clearly document what data is collected in accordance with Section 5 of the Digital Personal Data Protection Act, 2023 (India)
+a) Clearly document collected data in accordance with Section 5 of the Digital Personal Data Protection Act, 2023 (India)
 b) Provide examples of collected data
-c) Explain how data is used and who can access it
-d) Allow users to view or delete their analytics data as per Section 12 of the Digital Personal Data Protection Act, 2023 (India)
+c) Explain data usage and access
+d) Allow users to view or delete their analytics data per Section 12 of the Digital Personal Data Protection Act, 2023 (India)
 e) Maintain records of data processing activities if required under applicable law
 
 8. PATENT PROTECTION
 
 8.1 Patent Grant
 
-Contributors grant you broad patent rights:
+Contributors grant broad patent rights:
 
 a) Worldwide, royalty-free patent license
-b) Covers all patent claims necessarily infringed by using the Software
+b) Covers all patent claims necessarily infringed by the Software
 c) Allows making, using, selling, and distributing the Software
-d) Cannot be revoked as long as you comply with this license
+d) Non-revocable upon license compliance
 e) Subject to the Patents Act, 1970 (India) and equivalent patent laws
 
 8.2 Patent Retaliation
 
-If you sue anyone claiming the Software infringes your patents:
+If you initiate patent litigation claiming the Software infringes your patents:
 
 a) The lawsuit is immediately dismissed
 b) Your license to use the Software continues for existing and future deployments
@@ -204,107 +202,113 @@ b) Your license to use the Software continues for existing and future deployment
 
 This license does not grant:
 
-a) Rights to use trademarks, logos, or brand names protected under the Trade Marks Act, 1999 (India)
-b) The right to imply endorsement by original authors
+a) Rights to trademarks, logos, or brand names protected under the Trade Marks Act, 1999 (India)
+b) Right to imply endorsement by original authors
 c) Any trademark licenses
 
 9. WARRANTY DISCLAIMER
 
 9.1 No Warranty
 
-THE SOFTWARE IS PROVIDED "AS IS" WITHOUT ANY WARRANTY:
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND:
 
-a) No guarantee it will work for your purposes
-b) No guarantee it is free from bugs or errors
-c) No guarantee of merchantability (fit for sale)
-d) No guarantee of fitness for a particular purpose
-e) No guarantee of non-infringement of third-party rights
-f) No guarantee of security or data protection
+a) No guarantee of fitness for purpose
+b) No guarantee of merchantability
+c) No guarantee of error-free operation
+d) No guarantee of non-infringement
+e) No guarantee of security or data protection
 
 This disclaimer is made to the fullest extent permitted under the Indian Contract Act, 1872 and applicable law.
 
-9.2 Your Responsibility
+9.2 User Responsibility
 
-a) You use the Software at your own risk
-b) You are responsible for testing and validation
-c) You are responsible for backup and disaster recovery
-d) You are responsible for security measures
-e) You are responsible for compliance with applicable laws and regulations
+a) Use the Software at your own risk
+b) Responsible for testing and validation
+c) Responsible for backup and disaster recovery
+d) Responsible for security measures
+e) Responsible for compliance with applicable laws
 
 10. LIMITATION OF LIABILITY
 
-10.1 No Liability for Damages
+10.1 No Liability
 
-Contributors and copyright holders are NOT liable for:
+Contributors and copyright holders are not liable for:
 
 a) Direct damages from using the Software
 b) Indirect or consequential damages
 c) Loss of profits, data, or business opportunities
 d) System failures or downtime
 e) Security breaches or data loss
-f) Any damages exceeding the amount you paid for the Software (if anything)
+f) Any damages exceeding amounts paid for the Software
 
 This limitation applies to the fullest extent permitted under the Indian Contract Act, 1872, the Information Technology Act, 2000, and applicable law.
 
 10.2 Legal Maximum
 
-Some jurisdictions don't allow limiting liability. In those cases:
+Where jurisdictions prohibit limiting liability:
 
 a) Liability is limited to the maximum extent permitted by law
-b) Mandatory consumer protections under the Consumer Protection Act, 2019 (India) still apply where legally required
-c) Nothing in this license excludes liability for death or personal injury caused by negligence, fraud, or fraudulent misrepresentation
+b) Mandatory consumer protections under the Consumer Protection Act, 2019 (India) apply where required
+c) This license does not exclude liability for death or personal injury caused by negligence, fraud, or fraudulent misrepresentation
 
 11. TERMINATION
 
 11.1 Automatic Termination
 
-Your license automatically ends if you:
+Your license automatically terminates if you:
 
 a) Violate any term of this license
 b) Fail to make source code available as required
-c) Add restrictions that conflict with this license
-d) Infringe the copyright as defined under the Copyright Act, 1957 (India)
+c) Add restrictions conflicting with this license
+d) Infringe copyright as defined under the Copyright Act, 1957 (India)
 
 11.2 Reinstatement
 
-If you violate the license:
+Upon license violation:
 
-a) You have 7 business days to correct the violation after being notified
+a) You have 7 business days to correct the violation after notification
 b) If corrected within 7 business days, your license is automatically reinstated
 c) If not corrected within 7 business days, your license is temporarily suspended for 1 month
 d) If not corrected within that month, your license is permanently revoked
 e) If corrected within that month, your license is automatically reinstated
-e) Others who received the Software from you are not affected
+f) Others who received the Software from you are not affected
 
 12. GENERAL PROVISIONS
 
 12.1 License Compatibility
 
-This license is intentionally designed to be compatible with:
+This license is compatible with:
 
-a) GPL v3 or later (for copyleft projects)
-b) AGPL v3 or later (for network services)
+a) GPL v3 or later
+b) AGPL v3 or later
 c) Similar strong copyleft licenses
 
-However, you cannot combine this Software with proprietary software in a way that circumvents the copyleft requirements.
+You shall not combine this Software with proprietary software in a manner circumventing copyleft requirements.
 
 12.2 Severability
 
-If any part of this license is found unenforceable:
+If any provision is found unenforceable:
 
-a) The rest of the license remains in effect
-b) The unenforceable part is modified minimally to make it enforceable
+a) The remainder of the license remains in effect
+b) The unenforceable provision is modified minimally to make it enforceable
 c) The intent of the license is preserved
 
 12.3 No Waiver
 
-Failure to enforce any provision doesn't waive the right to enforce it later.
+Failure to enforce any provision does not waive the right to enforce it subsequently.
 
 12.4 Entire Agreement
 
-This license is the complete agreement regarding the Software. No other promises or terms apply unless in writing and signed by the copyright holder.
+This license constitutes the complete agreement regarding the Software. No other terms apply unless in writing and signed by the copyright holder.
 
-12.5 Governing Law and Jurisdiction
+12.5 Minor Protection and Conduct
+
+a) The Software shall not be used to create, distribute, or facilitate content that is obscene, vulgar, or inappropriate for minors
+b) Distributors and users must ensure the Software complies with applicable laws protecting minors, including the Protection of Children from Sexual Offences Act, 2012 (India) and similar legislation in other jurisdictions
+c) The Software shall not be used to harass, abuse, or engage in vulgar communication
+d) Violation of these conduct requirements may result in license termination as specified in Section 11
+
+12.6 Governing Law and Jurisdiction
 
 a) This license is governed by the laws of India, including but not limited to the Copyright Act, 1957, the Information Technology Act, 2000, the Patents Act, 1970, the Trade Marks Act, 1999, the Digital Personal Data Protection Act, 2023, and the Indian Contract Act, 1872
 b) Any disputes arising from this license shall be subject to the exclusive jurisdiction of the courts in India
@@ -316,51 +320,51 @@ c) The parties agree to submit to the jurisdiction of Indian courts without rega
 
 Users and distributors must ensure compliance with:
 
-a) The Copyright Act, 1957 (India) for all copyright-related matters
-b) The Information Technology Act, 2000 and Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 for electronic records and data security
-c) The Digital Personal Data Protection Act, 2023 for processing of personal data
-d) The Patents Act, 1970 for patent-related matters
-e) The Consumer Protection Act, 2019 for consumer-facing applications
-f) The Indian Penal Code, 1860, particularly Sections 43, 43A, and 66 related to computer offenses
-g) Any other applicable central or state laws and regulations
+a) Copyright Act, 1957 (India)
+b) Information Technology Act, 2000 and related rules for electronic records and data security
+c) Digital Personal Data Protection Act, 2023
+d) Patents Act, 1970 (India)
+e) Consumer Protection Act, 2019 (India)
+f) Indian Penal Code, 1860, Sections 43, 43A, and 66
+g) Other applicable laws and regulations
 
-13.2 AI-Generated Code and Machine Learning
+13.2 AI-Generated Code
 
-When using AI-generated code or machine learning tools in conjunction with this Software:
+When using AI-generated code with this Software:
 
-a) All AI-generated code incorporated into the Software or Derivative Works must comply with the Copyright Act, 1957 (India), including provisions regarding authorship and originality
-b) You must verify that AI-generated code does not infringe upon existing copyrights or violate the intellectual property rights of third parties
-c) You must disclose the use of AI tools in generating significant portions of code, as transparency is essential for attribution and compliance
-d) AI-generated code must not be used to circumvent the copyleft requirements or other obligations of this license
-e) You remain fully responsible for all code in your Derivative Works, regardless of whether it was human-written or AI-generated
-f) Any training of AI models on this Software must comply with this license and respect the copyleft provisions
-g) AI models trained on this Software or Derivative Works must not be used to generate proprietary code that violates the terms of this license
+a) AI-generated code must comply with the Copyright Act, 1957 (India)
+b) Verify AI-generated code does not infringe existing copyrights
+c) Disclose use of AI tools for significant code portions
+d) AI-generated code shall not circumvent copyleft requirements
+e) You remain responsible for all code regardless of origin
+f) AI model training on this Software must comply with this license
+g) AI models shall not generate proprietary code violating this license
 
 13.3 Plagiarism and Attribution
 
-To prevent plagiarism and ensure proper attribution as required under Indian law:
+To prevent plagiarism and ensure proper attribution:
 
-a) All contributions must be original work or properly licensed from third parties with appropriate attribution as required under Section 57 of the Copyright Act, 1957 (India)
-b) You must not copy code from other sources without proper licensing rights and attribution
-c) You must maintain clear records of code provenance, including sources of third-party code and licenses
-d) Plagiarism of code, documentation, or other materials may constitute copyright infringement under the Copyright Act, 1957 (India) and may result in civil and criminal liability under Sections 63, 63A, and 63B of the Act
-e) All redistributions must maintain proper attribution chains, clearly identifying original authors and subsequent contributors
-f) If you incorporate code from other FOSS projects, you must:
+a) All contributions must be original work or properly licensed with appropriate attribution as required under Section 57 of the Copyright Act, 1957 (India)
+b) Do not copy code without proper licensing rights and attribution
+c) Maintain clear records of code provenance
+d) Plagiarism may constitute copyright infringement under the Copyright Act, 1957 (India) and may result in civil and criminal liability under Sections 63, 63A, and 63B
+e) All redistributions must maintain proper attribution chains
+f) When incorporating code from other FOSS projects:
    i) Verify license compatibility with the 4License
-   ii) Maintain original copyright notices and attributions
-   iii) Document the source and license of incorporated code
-   iv) Ensure compliance with the original license terms
-g) False attribution or misrepresentation of authorship may constitute fraud under the Indian Penal Code, 1860 and copyright infringement under the Copyright Act, 1957 (India)
+   ii) Maintain original copyright notices
+   iii) Document source and license of incorporated code
+   iv) Ensure compliance with original license terms
+g) False attribution may constitute fraud under the Indian Penal Code, 1860 and copyright infringement under the Copyright Act, 1957 (India)
 
 13.4 Export Control
 
-Distribution of this Software may be subject to the provisions of the Information Technology Act, 2000 and any export control laws of India or other applicable jurisdictions. Users are responsible for compliance with such laws.
+Distribution may be subject to the Information Technology Act, 2000 and export control laws of India or other jurisdictions. Users are responsible for compliance.
 
-14. HOW TO APPLY THIS LICENSE
+14. APPLICATION
 
-To apply the 4License to your software:
+To apply the 4License:
 
-1. Include the full license text in a LICENSE file in your repository
+1. Include the full license text in a LICENSE file
 2. Add this header to each source file:
 
 Copyright (c) [YEAR] [YOUR NAME/ORGANIZATION]
@@ -368,11 +372,11 @@ Licensed under the 4License
 See LICENSE file for full terms
 SPDX-License-Identifier: 4License
 
-3. Document clearly:
-   - How to self-host the Software
-   - What dependencies are required
-   - How to build from source
-   - What analytics (if any) are collected
+3. Document:
+   - Self-hosting instructions
+   - Dependencies
+   - Build instructions
+   - Analytics collection (if any)
 
 SPDX-License-Identifier: 4License
 
