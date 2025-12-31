@@ -36,7 +36,7 @@ You are granted the following rights, subject to the conditions below:
 - Use the Software in production environments
 
 2.2 Modification Rights
-- Modify the Software to suit your needs but they must be available to all.
+- Modify the Software to suit your needs.
 - Improve, enhance, or fix bugs in the Software
 - Combine the Software with other works
 
@@ -78,7 +78,6 @@ a) All Derivative Works must be licensed under the 4License (this license)
 b) You must make the complete source code publicly available when you distribute any version
 c) The source code must be accessible from a public repository or website
 d) You cannot add additional restrictions that limit the rights granted here
-e) If you offer the Software as a service (SaaS), you must make the complete source code available to all users
 
 3.4 Feature Perpetuity Guarantee
 
@@ -108,15 +107,6 @@ a) Use only FOSS dependencies (libraries, frameworks, tools)
 b) Proprietary development tools or platforms are allowed
 c) Do not require proprietary services for building or testing
 d) Provide reproducible build instructions
-
-4.3 Exception for SaaS Offerings
-
-If you offer the Software as a hosted service (SaaS):
-
-a) You are exempt from the self-hosting requirement for your hosted offering
-b) However, you are still advised to provide self-hostable versions to users
-c) The self-hostable version must have feature parity with your SaaS offering
-d) Users must be able to migrate their data from your SaaS to self-hosted instances
 
 5. FREEMIUM MODEL PROTECTIONS
 
@@ -154,7 +144,6 @@ d) Demos must not have time limits
 a) Users have the right to access all features they had access to, indefinitely
 b) Features cannot be remotely disabled or degraded over time
 c) Users must be able to use older versions without forced updates
-d) No "phone home" requirements that could disable functionality
 
 6.2 Data Sovereignty
 
