@@ -26,6 +26,10 @@ This license ensures software freedom, user rights, and sustainable development.
 
 "FOSS" (Free and Open Source Software) means software with licenses approved by the Open Source Initiative or Free Software Foundation.
 
+"AI Training" means the use of the Software, its source code, documentation, or associated materials as training data for artificial intelligence systems, machine learning models, large language models (LLMs), neural networks, or any automated code generation systems.
+
+"AI Model" means any artificial intelligence system, machine learning model, large language model, neural network, or automated system capable of generating, suggesting, or synthesizing code, text, or other content based on training data.
+
 2. GRANT OF RIGHTS
 
 You are granted the following rights, subject to the conditions below:
@@ -46,7 +50,26 @@ You are granted the following rights, subject to the conditions below:
 - Sublicense the Software to others under this license
 - Sell copies or services related to the Software
 
-2.4 Patent Grant
+2.4 Restrictions on AI Training
+
+The following uses are EXPLICITLY PROHIBITED:
+
+a) Using the Software or any part thereof as training data for AI Models
+b) Scraping, mining, or extracting the Software's code or documentation for AI Training purposes
+c) Including the Software in datasets used to train, fine-tune, or improve AI Models
+d) Using the Software to create or enhance code generation tools, AI assistants, or automated programming systems
+e) Feeding the Software into any system that learns from it to generate similar or derivative code
+f) Creating embeddings, vectors, or other representations of the Software for AI Training
+g) Using the Software in any automated system that generates code based on learned patterns
+
+This prohibition applies to:
+- Commercial AI training (e.g., GitHub Copilot, ChatGPT, Claude, Bard, etc.)
+- Research AI training (academic or non-profit)
+- Internal AI systems within organizations
+- Open source AI models and datasets
+- Any future AI technologies with similar capabilities
+
+2.5 Patent Grant
 Any contributor grants you a worldwide, royalty-free, non-exclusive patent license to use, make, have made, sell, and import the Software. This license covers all patent claims that the contributor can license and that are necessarily infringed by the Software. This grant is subject to the Patents Act, 1970 (India) and equivalent patent laws in other jurisdictions.
 
 3. CONDITIONS AND REQUIREMENTS
@@ -264,17 +287,25 @@ a) Violate any term of this license
 b) Fail to make source code available as required
 c) Add restrictions that conflict with this license
 d) Infringe the copyright as defined under the Copyright Act, 1957 (India)
+e) Use the Software for AI Training in violation of Section 2.4 and Section 13.2
 
 11.2 Reinstatement
 
 If you violate the license:
 
-a) You have 7 business days to correct the violation after being notified
-b) If corrected within 7 business days, your license is automatically reinstated
-c) If not corrected within 7 business days, your license is temporarily suspended for 1 month
-d) If not corrected within that month, your license is permanently revoked
-e) If corrected within that month, your license is automatically reinstated
-e) Others who received the Software from you are not affected
+a) For violations OTHER THAN AI Training:
+   i) You have 7 business days to correct the violation after being notified
+   ii) If corrected within 7 business days, your license is automatically reinstated
+   iii) If not corrected within 7 business days, your license is temporarily suspended for 1 month
+   iv) If not corrected within that month, your license is permanently revoked
+   v) If corrected within that month, your license is automatically reinstated
+
+b) For AI Training violations:
+   i) Your license is IMMEDIATELY and PERMANENTLY terminated with NO opportunity for reinstatement
+   ii) You must destroy all copies of the Software and any AI Models trained on it
+   iii) This termination is non-negotiable and irreversible
+
+c) In all cases, others who received the Software from you are not affected, provided they are in compliance
 
 12. GENERAL PROVISIONS
 
@@ -324,17 +355,91 @@ e) The Consumer Protection Act, 2019 for consumer-facing applications
 f) The Indian Penal Code, 1860, particularly Sections 43, 43A, and 66 related to computer offenses
 g) Any other applicable central or state laws and regulations
 
-13.2 AI-Generated Code and Machine Learning
+13.2 Prohibition of AI Training and Restrictions on AI-Generated Code
 
-When using AI-generated code or machine learning tools in conjunction with this Software:
+13.2.1 Absolute Prohibition on AI Training
 
-a) All AI-generated code incorporated into the Software or Derivative Works must comply with the Copyright Act, 1957 (India), including provisions regarding authorship and originality
-b) You must verify that AI-generated code does not infringe upon existing copyrights or violate the intellectual property rights of third parties
-c) You must disclose the use of AI tools in generating significant portions of code, as transparency is essential for attribution and compliance
-d) AI-generated code must not be used to circumvent the copyleft requirements or other obligations of this license
-e) You remain fully responsible for all code in your Derivative Works, regardless of whether it was human-written or AI-generated
-f) Any training of AI models on this Software must comply with this license and respect the copyleft provisions
-g) AI models trained on this Software or Derivative Works must not be used to generate proprietary code that violates the terms of this license
+The use of this Software for AI Training is STRICTLY PROHIBITED:
+
+a) You may NOT use the Software, its source code, documentation, comments, or any associated materials as training data for any AI Model
+b) You may NOT scrape, crawl, mine, or extract the Software for the purpose of training, fine-tuning, or improving any AI system
+c) You may NOT include the Software in any dataset, corpus, or collection used for AI Training
+d) You may NOT create derived representations (embeddings, tokens, vectors, etc.) of the Software for AI Training purposes
+e) You may NOT use automated systems to learn from the Software's patterns, structure, or implementation for code generation purposes
+f) This prohibition applies regardless of:
+   i) Whether the AI Training is commercial or non-commercial
+   ii) Whether the resulting AI Model will be proprietary or open source
+   iii) Whether the AI Training is direct or indirect (through intermediary systems)
+   iv) The purpose or intent behind the AI Training
+   v) Whether the Software is used alone or as part of a larger dataset
+
+13.2.2 No Exceptions
+
+There are NO exceptions to the AI Training prohibition:
+
+a) Research and academic use for AI Training is NOT permitted
+b) Non-profit AI Training is NOT permitted
+c) Training "open source" AI models is NOT permitted
+d) Fair use or fair dealing defenses do NOT apply to AI Training under this license
+e) Indirect training through third-party services that scrape or aggregate code is NOT permitted
+f) Any use that involves the Software being processed by systems that learn to generate code is prohibited
+
+13.2.3 Enforcement and Violation Consequences
+
+Violation of the AI Training prohibition will result in:
+
+a) Immediate and automatic termination of your license with no opportunity for reinstatement
+b) You must immediately cease all use of the Software and destroy all copies in your possession
+c) Any AI Models trained using the Software must be destroyed or retrained without the Software
+d) You may be subject to legal action for copyright infringement under the Copyright Act, 1957 (India) and equivalent laws in other jurisdictions
+e) Statutory damages and injunctive relief may be sought to the fullest extent permitted by law
+f) You will be liable for all costs and legal fees incurred in enforcement actions
+
+13.2.4 Restrictions on Using AI-Generated Code
+
+When incorporating AI-generated code into the Software or Derivative Works:
+
+a) You must verify the AI Model that generated the code was NOT trained on this Software or any 4License-licensed software
+b) You must obtain written confirmation from the AI Model provider that the training data did not include 4License-licensed code
+c) All AI-generated code incorporated into the Software or Derivative Works must comply with the Copyright Act, 1957 (India), including provisions regarding authorship and originality
+d) You must verify that AI-generated code does not infringe upon existing copyrights or violate the intellectual property rights of third parties
+e) You must prominently disclose the use of AI tools in generating any significant portions of code (more than 10 lines or any complete function/method)
+f) AI-generated code must not be used to circumvent the copyleft requirements or other obligations of this license
+g) You remain fully responsible for all code in your Derivative Works, regardless of whether it was human-written or AI-generated
+h) If you cannot verify the provenance of the AI Model's training data, you accept full liability for any copyright infringement that may result from using AI-generated code
+
+13.2.5 Permitted AI Uses
+
+The following limited uses of AI in conjunction with the Software ARE permitted:
+
+a) Using AI-powered development tools (IDEs, linters, formatters) that do NOT send your code to external servers for training
+b) Using local AI models that run entirely on your own infrastructure and do NOT share data with third parties
+c) Using AI for analyzing your own Derivative Works that you have created, provided the AI system does not retain or learn from the Software
+d) Using AI for security scanning, vulnerability detection, or code quality analysis, provided:
+   i) The analysis is performed for your internal use only
+   ii) The AI system does not retain the Software after analysis
+   iii) The Software is not used to improve the AI system
+   iv) Results are not aggregated with other codebases to train AI Models
+
+13.2.6 Transparency Requirements for AI Companies
+
+If you operate an AI company or provide AI-powered development tools:
+
+a) You must maintain and publish a list of all licenses whose code you have EXCLUDED from your training data
+b) You must provide users with the ability to verify that specific repositories or licenses were not included in training
+c) You must implement technical measures to prevent 4License-licensed code from being used in training
+d) You must promptly remove any 4License-licensed code from your training data if discovered
+e) You must notify copyright holders if you discover you have inadvertently trained on 4License-licensed code
+f) You must provide documentation of your compliance measures upon request from copyright holders
+
+13.2.7 Burden of Proof
+
+In any dispute regarding AI Training:
+
+a) The burden of proof is on the accused party to demonstrate they did NOT use the Software for AI Training
+b) Circumstantial evidence (such as similarity of generated code to the Software) may be sufficient to establish a prima facie case of violation
+c) AI companies must provide transparent access to their training data lists and exclusion mechanisms
+d) Failure to maintain adequate records of training data sources will be considered evidence of potential violation
 
 13.3 Plagiarism and Attribution
 
