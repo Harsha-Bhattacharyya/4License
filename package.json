@@ -18,8 +18,8 @@
     "lint:css": "stylelint 'src/**/*.css'",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:fix": "eslint --fix 'src/**/*.js' 'scripts/**/*.js' webpack.config.js && stylelint --fix 'src/**/*.css'",
-    "format": "prettier --write '**/*.{json,yml,yaml,md,css}' --ignore-path .gitignore",
-    "format:check": "prettier --check '**/*.{json,yml,yaml,md,css}' --ignore-path .gitignore",
+    "format": "prettier --write '**/*.{json,yml,yaml,md,css}'",
+    "format:check": "prettier --check '**/*.{json,yml,yaml,md,css}'",
     "analyze": "webpack --mode production --env analyze"
   },
   "devDependencies": {

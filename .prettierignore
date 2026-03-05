@@ -3,5 +3,6 @@ _site
 assets/dist
 .jekyll-cache
 generated
+_data
 *.html
 Gemfile.lock
