@@ -3,62 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  /* Light theme (Catppuccin Latte) — default */
-  :root {
-    --color-base: 239 241 245;
-    --color-mantle: 230 233 239;
-    --color-crust: 220 224 232;
-    --color-text: 76 79 105;
-    --color-subtext1: 92 95 119;
-    --color-subtext0: 108 111 133;
-    --color-overlay2: 124 127 147;
-    --color-overlay1: 140 143 161;
-    --color-overlay0: 156 160 176;
-    --color-surface2: 172 176 190;
-    --color-surface1: 188 192 204;
-    --color-surface0: 204 208 218;
-    --color-blue: 30 102 245;
-    --color-lavender: 114 135 253;
-    --color-sapphire: 32 159 181;
-    --color-teal: 23 146 153;
-    --color-green: 64 160 43;
-    --color-yellow: 223 142 29;
-    --color-peach: 254 100 11;
-    --color-red: 210 15 57;
-    --color-mauve: 136 57 239;
-    --color-pink: 234 118 203;
-    --color-flamingo: 221 120 120;
-    --color-rosewater: 220 138 120;
-  }
-
-  /* Dark theme (Catppuccin Mocha) */
-  .dark {
-    --color-base: 30 30 46;
-    --color-mantle: 24 24 37;
-    --color-crust: 17 17 27;
-    --color-text: 205 214 244;
-    --color-subtext1: 186 194 222;
-    --color-subtext0: 166 173 200;
-    --color-overlay2: 147 153 178;
-    --color-overlay1: 127 132 156;
-    --color-overlay0: 108 112 134;
-    --color-surface2: 88 91 112;
-    --color-surface1: 69 71 90;
-    --color-surface0: 49 50 68;
-    --color-blue: 137 180 250;
-    --color-lavender: 180 190 254;
-    --color-sapphire: 116 199 236;
-    --color-teal: 148 226 213;
-    --color-green: 166 227 161;
-    --color-yellow: 249 226 175;
-    --color-peach: 250 179 135;
-    --color-red: 243 139 168;
-    --color-mauve: 203 166 247;
-    --color-pink: 245 194 231;
-    --color-flamingo: 242 205 205;
-    --color-rosewater: 245 224 220;
-  }
-
   body {
     @apply bg-latte-base text-latte-text;
 
@@ -67,13 +11,8 @@
       -apple-system,
       "Segoe UI",
       Roboto,
-      "Helvetica Neue",
-      "Noto Sans",
-      "Liberation Sans",
       Arial,
       sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 
   .dark body {
@@ -82,56 +21,64 @@
 }
 
 @layer components {
+  /* Raised button with shadow — traditional feel */
   .btn {
-    @apply inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium
-      transition-colors duration-150 focus:outline-none focus:ring-2
-      focus:ring-offset-2;
+    @apply inline-flex items-center gap-2 rounded border px-5 py-2.5 text-sm
+      font-semibold shadow-md transition-all duration-100
+      focus:outline-none focus:ring-2 focus:ring-offset-2
+      active:translate-y-px active:shadow-sm;
   }
 
   .btn-primary {
-    @apply bg-latte-blue text-latte-base hover:bg-latte-sapphire
-      focus:ring-latte-blue;
+    @apply border-latte-blue bg-latte-blue text-white shadow-latte-blue/30
+      hover:brightness-110 focus:ring-latte-blue;
   }
 
   .dark .btn-primary {
-    @apply bg-mocha-blue text-mocha-base hover:bg-mocha-sapphire
+    @apply border-mocha-blue bg-mocha-blue text-mocha-crust shadow-mocha-blue/30
       focus:ring-mocha-blue;
   }
 
+  .btn-secondary {
+    @apply border-latte-surface2 bg-latte-mantle text-latte-text shadow-latte-crust/20
+      hover:bg-latte-surface0 focus:ring-latte-blue;
+  }
+
+  .dark .btn-secondary {
+    @apply border-mocha-surface2 bg-mocha-surface0 text-mocha-text shadow-mocha-crust/30
+      hover:bg-mocha-surface1 focus:ring-mocha-blue;
+  }
+
+  /* Card with inset shadow — physical depth */
   .card {
-    @apply rounded-xl border p-6;
-    @apply border-latte-surface1 bg-latte-mantle;
+    @apply rounded-lg border bg-white p-5 shadow-md;
+    @apply border-latte-surface1;
   }
 
   .dark .card {
-    @apply border-mocha-surface1 bg-mocha-mantle;
+    @apply border-mocha-surface1 bg-mocha-mantle shadow-mocha-crust/40;
   }
 
-  /* Print styles for legal text */
+  /* License text — indented paragraphs */
+  .license-body {
+    @apply pl-6 text-sm leading-relaxed;
+
+    text-indent: 1.5em;
+  }
+
+  .license-body .no-indent {
+    text-indent: 0;
+  }
+
   @media print {
     body {
       color: #000 !important;
       background: #fff !important;
       font-size: 11pt;
-      line-height: 1.5;
     }
 
     .no-print {
       display: none !important;
-    }
-
-    a {
-      text-decoration: underline;
-    }
-
-    h1,
-    h2,
-    h3 {
-      page-break-after: avoid;
-    }
-
-    .license-section {
-      page-break-inside: avoid;
     }
   }
 }

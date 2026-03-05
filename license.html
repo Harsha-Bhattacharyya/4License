@@ -4,110 +4,39 @@ title: "License"
 description: "Full text of the Human Only Public License (HOPL)"
 ---
 
-<div class="mx-auto max-w-5xl px-4 py-10" x-data="toc">
-  <div class="lg:grid lg:grid-cols-[220px_1fr] lg:gap-8">
-
-    <!-- Table of Contents (sticky sidebar) -->
-    <aside class="no-print hidden lg:block">
-      <nav class="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto rounded-lg border border-latte-surface1 bg-latte-mantle p-4 dark:border-mocha-surface1 dark:bg-mocha-mantle" aria-label="Table of contents">
-        <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-latte-overlay2 dark:text-mocha-overlay2">Contents</h2>
-        <ul class="space-y-1 text-sm">
-          {% for item in site.data.toc %}
-          <li>
-            <a
-              href="#{{ item.slug }}"
-              class="block rounded px-2 py-1 transition-colors"
-              :class="activeId === '{{ item.slug }}'
-                ? 'bg-latte-surface0 text-latte-blue dark:bg-mocha-surface0 dark:text-mocha-blue font-medium'
-                : 'text-latte-subtext1 hover:text-latte-text dark:text-mocha-subtext1 dark:hover:text-mocha-text'"
-            >
-              {{ item.title }}
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-      </nav>
-    </aside>
-
-    <!-- License content -->
-    <article class="min-w-0">
-      <div class="mb-6 flex items-center justify-between">
-        <h1 class="text-3xl font-bold text-latte-text dark:text-mocha-text">Human Only Public License</h1>
-        <a
-          href="{{ '/LICENSE.en-US' | relative_url }}"
-          download
-          class="btn no-print border border-latte-surface2 text-sm text-latte-subtext1 hover:bg-latte-surface0 dark:border-mocha-surface2 dark:text-mocha-subtext1 dark:hover:bg-mocha-surface0"
-        >
-          <!-- download icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
-          Download
-        </a>
-      </div>
-
-<section id="human-only-public-license-hopl" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h1 class="text-2xl font-bold mb-4 text-latte-text dark:text-mocha-text">
-      <a href="#human-only-public-license-hopl" class="hover:text-latte-blue dark:hover:text-mocha-blue">Human Only Public License (HOPL)</a>
-    </h1>
+<div class="mx-auto max-w-3xl px-6 py-10">
+  <div class="mb-6 flex items-center justify-between">
+    <h1 class="text-2xl font-bold text-latte-text dark:text-mocha-text">Human Only Public License</h1>
+    <a href="{{ '/LICENSE.en-US' | relative_url }}" download class="btn btn-secondary no-print text-sm">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+      Download
+    </a>
   </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">Copyright (c) 2026 Harsha Bhattacharyya
+
+  <!-- Table of contents -->
+  <details class="no-print mb-8 rounded-lg border border-latte-surface1 bg-white p-4 shadow-sm dark:border-mocha-surface1 dark:bg-mocha-mantle">
+    <summary class="cursor-pointer text-sm font-semibold text-latte-text dark:text-mocha-text">Table of Contents</summary>
+    <ul class="mt-3 space-y-1 text-sm">
+      {% for item in site.data.toc %}
+      <li><a href="#{{ item.slug }}" class="text-latte-blue hover:underline dark:text-mocha-blue">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </details>
+
+  <article class="border-l-4 border-latte-surface1 pl-4 dark:border-mocha-surface1">
+<section id="human-only-public-license-hopl" class="license-section mb-6 scroll-mt-16">
+<h2 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#human-only-public-license-hopl">Human Only Public License (HOPL)</a></h2>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">Copyright (c) 2026 Harsha Bhattacharyya
 
 Permission is granted to copy and distribute verbatim copies of this license document without modification. Changing this license text is not permitted.</div>
-    </div>
-  </div>
 </section>
-
-<section id="preamble" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h2 class="text-xl font-semibold mb-3 text-latte-text dark:text-mocha-text">
-      <a href="#preamble" class="hover:text-latte-blue dark:hover:text-mocha-blue">PREAMBLE</a>
-    </h2>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">This license ensures software freedom, user rights, and sustainable development through strong copyleft protections that benefit all users while preventing vendor lock-in and feature degradation.</div>
-    </div>
-  </div>
+<section id="preamble" class="license-section mb-6 scroll-mt-16">
+<h3 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#preamble">PREAMBLE</a></h3>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">This license ensures software freedom, user rights, and sustainable development through strong copyleft protections that benefit all users while preventing vendor lock-in and feature degradation.</div>
 </section>
-
-<section id="1-definitions" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h2 class="text-xl font-semibold mb-3 text-latte-text dark:text-mocha-text">
-      <a href="#1-definitions" class="hover:text-latte-blue dark:hover:text-mocha-blue">1. DEFINITIONS</a>
-    </h2>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">&quot;Software&quot; means the original work licensed under this license, including source code, documentation, and associated materials.
+<section id="1-definitions" class="license-section mb-6 scroll-mt-16">
+<h3 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#1-definitions">1. DEFINITIONS</a></h3>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">&quot;Software&quot; means the original work licensed under this license, including source code, documentation, and associated materials.
 
 &quot;Derivative Work&quot; means any modification, enhancement, translation, or work based on the Software.
 
@@ -124,123 +53,33 @@ Permission is granted to copy and distribute verbatim copies of this license doc
 &quot;AI Training&quot; means the use of the Software, its source code, documentation, or associated materials as training data for artificial intelligence systems, machine learning models, large language models (LLMs), neural networks, or any automated code generation systems.
 
 &quot;AI Model&quot; means any artificial intelligence system, machine learning model, large language model, neural network, or automated system capable of generating, suggesting, or synthesizing code, text, or other content based on training data.</div>
-    </div>
-  </div>
 </section>
-
-<section id="2-grant-of-rights" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h2 class="text-xl font-semibold mb-3 text-latte-text dark:text-mocha-text">
-      <a href="#2-grant-of-rights" class="hover:text-latte-blue dark:hover:text-mocha-blue">2. GRANT OF RIGHTS</a>
-    </h2>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">Subject to the conditions below, you are granted:</div>
-    </div>
-  </div>
+<section id="2-grant-of-rights" class="license-section mb-6 scroll-mt-16">
+<h3 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#2-grant-of-rights">2. GRANT OF RIGHTS</a></h3>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">Subject to the conditions below, you are granted:</div>
 </section>
-
-<section id="2-1-usage-rights" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#2-1-usage-rights" class="hover:text-latte-blue dark:hover:text-mocha-blue">2.1 Usage Rights</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">- Use the Software for any lawful purpose
+<section id="2-1-usage-rights" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#2-1-usage-rights">2.1 Usage Rights</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">- Use the Software for any lawful purpose
 - Operate the Software on any infrastructure
 - Deploy the Software in production environments</div>
-    </div>
-  </div>
 </section>
-
-<section id="2-2-modification-rights" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#2-2-modification-rights" class="hover:text-latte-blue dark:hover:text-mocha-blue">2.2 Modification Rights</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">- Modify the Software as needed
+<section id="2-2-modification-rights" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#2-2-modification-rights">2.2 Modification Rights</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">- Modify the Software as needed
 - Enhance or repair the Software
 - Integrate the Software with other works</div>
-    </div>
-  </div>
 </section>
-
-<section id="2-3-distribution-rights" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#2-3-distribution-rights" class="hover:text-latte-blue dark:hover:text-mocha-blue">2.3 Distribution Rights</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">- Copy and distribute the Software
+<section id="2-3-distribution-rights" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#2-3-distribution-rights">2.3 Distribution Rights</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">- Copy and distribute the Software
 - Publish the Software on any platform
 - Sublicense under this license
 - Commercialize the Software and related services</div>
-    </div>
-  </div>
 </section>
-
-<section id="2-4-restrictions-on-ai-training" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#2-4-restrictions-on-ai-training" class="hover:text-latte-blue dark:hover:text-mocha-blue">2.4 Restrictions on AI Training</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">The following uses are EXPLICITLY PROHIBITED:
+<section id="2-4-restrictions-on-ai-training" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#2-4-restrictions-on-ai-training">2.4 Restrictions on AI Training</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">The following uses are EXPLICITLY PROHIBITED:
 
 a) Using the Software or any part thereof as training data for AI Models
 b) Scraping, mining, or extracting the Software's code or documentation for AI Training purposes
@@ -256,559 +95,182 @@ This prohibition applies to:
 - Internal AI systems within organizations
 - Open source AI models and datasets
 - Any future AI technologies with similar capabilities</div>
-    </div>
-  </div>
 </section>
-
-<section id="2-5-patent-grant" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#2-5-patent-grant" class="hover:text-latte-blue dark:hover:text-mocha-blue">2.5 Patent Grant</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">Any contributor grants you a worldwide, royalty-free, non-exclusive patent license to use, make, have made, sell, and import the Software. This license covers all patent claims that the contributor can license and that are necessarily infringed by the Software. This grant is subject to the Patents Act, 1970 (India) and equivalent patent laws in other jurisdictions.</div>
-    </div>
-  </div>
+<section id="2-5-patent-grant" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#2-5-patent-grant">2.5 Patent Grant</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">Any contributor grants you a worldwide, royalty-free, non-exclusive patent license to use, make, have made, sell, and import the Software. This license covers all patent claims that the contributor can license and that are necessarily infringed by the Software. This grant is subject to the Patents Act, 1970 (India) and equivalent patent laws in other jurisdictions.</div>
 </section>
-
-<section id="3-conditions-and-requirements" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h2 class="text-xl font-semibold mb-3 text-latte-text dark:text-mocha-text">
-      <a href="#3-conditions-and-requirements" class="hover:text-latte-blue dark:hover:text-mocha-blue">3. CONDITIONS AND REQUIREMENTS</a>
-    </h2>
-  </div>
+<section id="3-conditions-and-requirements" class="license-section mb-6 scroll-mt-16">
+<h3 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#3-conditions-and-requirements">3. CONDITIONS AND REQUIREMENTS</a></h3>
 </section>
-
-<section id="3-1-source-code-retention" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#3-1-source-code-retention" class="hover:text-latte-blue dark:hover:text-mocha-blue">3.1 Source Code Retention</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">When distributing source code, you must:
+<section id="3-1-source-code-retention" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#3-1-source-code-retention">3.1 Source Code Retention</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">When distributing source code, you must:
 
 a) Preserve the original copyright notice as required under Section 57 of the Copyright Act, 1957 (India)
 b) Include this complete license text
 c) Maintain all warranty disclaimers
 d) Credit original authors
 e) Document modifications with dates</div>
-    </div>
-  </div>
 </section>
-
-<section id="3-2-binary-distribution" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#3-2-binary-distribution" class="hover:text-latte-blue dark:hover:text-mocha-blue">3.2 Binary Distribution</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">When distributing compiled or binary versions, you must:
+<section id="3-2-binary-distribution" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#3-2-binary-distribution">3.2 Binary Distribution</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">When distributing compiled or binary versions, you must:
 
 a) Include this license in documentation or a LICENSE file
 b) Reproduce copyright notices in user documentation as required under the Copyright Act, 1957 (India)
 c) Provide instructions for obtaining source code
 d) Include all warranty disclaimers</div>
-    </div>
-  </div>
 </section>
-
-<section id="3-3-copyleft-requirement" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#3-3-copyleft-requirement" class="hover:text-latte-blue dark:hover:text-mocha-blue">3.3 Copyleft Requirement</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">All Derivative Works must:
+<section id="3-3-copyleft-requirement" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#3-3-copyleft-requirement">3.3 Copyleft Requirement</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">All Derivative Works must:
 
 a) Be licensed under the 4License
 b) Have complete source code publicly available upon distribution
 c) Be accessible from a public repository or website
 d) Not impose additional restrictions limiting the rights granted herein</div>
-    </div>
-  </div>
 </section>
-
-<section id="3-4-feature-perpetuity" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#3-4-feature-perpetuity" class="hover:text-latte-blue dark:hover:text-mocha-blue">3.4 Feature Perpetuity</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">All features must remain perpetually accessible:
+<section id="3-4-feature-perpetuity" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#3-4-feature-perpetuity">3.4 Feature Perpetuity</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">All features must remain perpetually accessible:
 
 a) Features added to Derivative Works must remain available in all subsequent versions
 b) Features shall not be removed, paywalled, or degraded
 c) Users must retain access to all historical features
 d) This applies to functionality, not specific implementations</div>
-    </div>
-  </div>
 </section>
-
-<section id="4-self-hosting-mandate" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h2 class="text-xl font-semibold mb-3 text-latte-text dark:text-mocha-text">
-      <a href="#4-self-hosting-mandate" class="hover:text-latte-blue dark:hover:text-mocha-blue">4. SELF-HOSTING MANDATE</a>
-    </h2>
-  </div>
+<section id="4-self-hosting-mandate" class="license-section mb-6 scroll-mt-16">
+<h3 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#4-self-hosting-mandate">4. SELF-HOSTING MANDATE</a></h3>
 </section>
-
-<section id="4-1-core-requirement" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#4-1-core-requirement" class="hover:text-latte-blue dark:hover:text-mocha-blue">4.1 Core Requirement</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">The Software and all Derivative Works must be self-hostable:
+<section id="4-1-core-requirement" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#4-1-core-requirement">4.1 Core Requirement</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">The Software and all Derivative Works must be self-hostable:
 
 a) Users must be able to install and operate the Software on their own infrastructure
 b) Core functionality shall not require connection to vendor-controlled servers
 c) All APIs, databases, and services must have self-hostable alternatives
 d) Complete installation documentation must be provided</div>
-    </div>
-  </div>
 </section>
-
-<section id="4-2-development-requirements" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#4-2-development-requirements" class="hover:text-latte-blue dark:hover:text-mocha-blue">4.2 Development Requirements</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">Development must avoid vendor lock-in:
+<section id="4-2-development-requirements" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#4-2-development-requirements">4.2 Development Requirements</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">Development must avoid vendor lock-in:
 
 a) Use only FOSS dependencies
 b) Proprietary development tools are permitted
 c) Do not require proprietary services for building or testing
 d) Provide reproducible build instructions</div>
-    </div>
-  </div>
 </section>
-
-<section id="5-freemium-model-protections" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h2 class="text-xl font-semibold mb-3 text-latte-text dark:text-mocha-text">
-      <a href="#5-freemium-model-protections" class="hover:text-latte-blue dark:hover:text-mocha-blue">5. FREEMIUM MODEL PROTECTIONS</a>
-    </h2>
-  </div>
+<section id="5-freemium-model-protections" class="license-section mb-6 scroll-mt-16">
+<h3 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#5-freemium-model-protections">5. FREEMIUM MODEL PROTECTIONS</a></h3>
 </section>
-
-<section id="5-1-free-tier-permanence" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#5-1-free-tier-permanence" class="hover:text-latte-blue dark:hover:text-mocha-blue">5.1 Free Tier Permanence</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">If adopting a freemium business model:
+<section id="5-1-free-tier-permanence" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#5-1-free-tier-permanence">5.1 Free Tier Permanence</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">If adopting a freemium business model:
 
 a) Features that are free must remain free perpetually
 b) Free features shall not be moved to paid tiers
 c) This requirement applies to all Derivative Works and future versions
 d) Free tier capacity may be limited, but feature access shall not
 e) Changes to free tier features may constitute unfair trade practice under the Consumer Protection Act, 2019 (India)</div>
-    </div>
-  </div>
 </section>
-
-<section id="5-2-trial-prohibition" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#5-2-trial-prohibition" class="hover:text-latte-blue dark:hover:text-mocha-blue">5.2 Trial Prohibition</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">Time-limited trials are prohibited:
+<section id="5-2-trial-prohibition" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#5-2-trial-prohibition">5.2 Trial Prohibition</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">Time-limited trials are prohibited:
 
 a) Full features shall not be offered for limited time then require payment
 b) Features must be either free perpetually or paid from inception
 c) This prevents bait-and-switch tactics that may violate the Consumer Protection Act, 2019 (India)</div>
-    </div>
-  </div>
 </section>
-
-<section id="5-3-demonstration-exception" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#5-3-demonstration-exception" class="hover:text-latte-blue dark:hover:text-mocha-blue">5.3 Demonstration Exception</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">Limited demonstrations are permitted:
+<section id="5-3-demonstration-exception" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#5-3-demonstration-exception">5.3 Demonstration Exception</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">Limited demonstrations are permitted:
 
 a) Specific, clearly-marked demonstrations may be offered
 b) Demonstrations must be explicitly labeled, not as trials
 c) Demonstrations may have limited functionality to showcase features
 d) Demonstrations shall not have time limits</div>
-    </div>
-  </div>
 </section>
-
-<section id="6-user-sovereignty-and-perpetual-access" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h2 class="text-xl font-semibold mb-3 text-latte-text dark:text-mocha-text">
-      <a href="#6-user-sovereignty-and-perpetual-access" class="hover:text-latte-blue dark:hover:text-mocha-blue">6. USER SOVEREIGNTY AND PERPETUAL ACCESS</a>
-    </h2>
-  </div>
+<section id="6-user-sovereignty-and-perpetual-access" class="license-section mb-6 scroll-mt-16">
+<h3 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#6-user-sovereignty-and-perpetual-access">6. USER SOVEREIGNTY AND PERPETUAL ACCESS</a></h3>
 </section>
-
-<section id="6-1-access-rights" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#6-1-access-rights" class="hover:text-latte-blue dark:hover:text-mocha-blue">6.1 Access Rights</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">a) Users have the right to access all previously accessible features indefinitely
+<section id="6-1-access-rights" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#6-1-access-rights">6.1 Access Rights</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">a) Users have the right to access all previously accessible features indefinitely
 b) Features shall not be remotely disabled or degraded
 c) Users must be able to use older versions without forced updates</div>
-    </div>
-  </div>
 </section>
-
-<section id="6-2-data-sovereignty" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#6-2-data-sovereignty" class="hover:text-latte-blue dark:hover:text-mocha-blue">6.2 Data Sovereignty</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">a) Users must be able to export all data in standard formats as required under Section 11 of the Digital Personal Data Protection Act, 2023 (India)
+<section id="6-2-data-sovereignty" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#6-2-data-sovereignty">6.2 Data Sovereignty</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">a) Users must be able to export all data in standard formats as required under Section 11 of the Digital Personal Data Protection Act, 2023 (India)
 b) Proprietary lock-in of user data is prohibited
 c) Data migration tools must be provided
 d) Users own all data created using the Software</div>
-    </div>
-  </div>
 </section>
-
-<section id="7-privacy-and-analytics" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h2 class="text-xl font-semibold mb-3 text-latte-text dark:text-mocha-text">
-      <a href="#7-privacy-and-analytics" class="hover:text-latte-blue dark:hover:text-mocha-blue">7. PRIVACY AND ANALYTICS</a>
-    </h2>
-  </div>
+<section id="7-privacy-and-analytics" class="license-section mb-6 scroll-mt-16">
+<h3 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#7-privacy-and-analytics">7. PRIVACY AND ANALYTICS</a></h3>
 </section>
-
-<section id="7-1-permitted-analytics" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#7-1-permitted-analytics" class="hover:text-latte-blue dark:hover:text-mocha-blue">7.1 Permitted Analytics</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">Optional, aggregate, anonymized usage telemetry for project improvement may include:
+<section id="7-1-permitted-analytics" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#7-1-permitted-analytics">7.1 Permitted Analytics</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">Optional, aggregate, anonymized usage telemetry for project improvement may include:
 
 a) Crash reports and error logs without personal data
 b) Feature usage statistics, anonymized and aggregated
 c) Performance metrics
 d) General installation and deployment information</div>
-    </div>
-  </div>
 </section>
-
-<section id="7-2-privacy-requirements" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#7-2-privacy-requirements" class="hover:text-latte-blue dark:hover:text-mocha-blue">7.2 Privacy Requirements</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">All analytics must comply with applicable data protection laws:
+<section id="7-2-privacy-requirements" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#7-2-privacy-requirements">7.2 Privacy Requirements</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">All analytics must comply with applicable data protection laws:
 
 a) Opt-in Only: Analytics must be disabled by default, requiring explicit user consent as mandated by Section 6 of the Digital Personal Data Protection Act, 2023 (India)
 b) No Personal Information: Names, emails, IP addresses, or identifying data shall not be collected without explicit consent under the Digital Personal Data Protection Act, 2023 (India)
 c) Self-Hostable Disable: Users must be able to completely disable all telemetry and exercise their right to withdraw consent under Section 6 of the Digital Personal Data Protection Act, 2023 (India)
 d) Auditable Collection: Analytics collection code must be open source and auditable
 e) Legal Compliance: Must comply with the Digital Personal Data Protection Act, 2023 (India), General Data Protection Regulation (EU) 2016/679 (GDPR), and similar privacy laws</div>
-    </div>
-  </div>
 </section>
-
-<section id="7-3-transparency" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#7-3-transparency" class="hover:text-latte-blue dark:hover:text-mocha-blue">7.3 Transparency</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">a) Clearly document collected data in accordance with Section 5 of the Digital Personal Data Protection Act, 2023 (India)
+<section id="7-3-transparency" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#7-3-transparency">7.3 Transparency</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">a) Clearly document collected data in accordance with Section 5 of the Digital Personal Data Protection Act, 2023 (India)
 b) Provide examples of collected data
 c) Explain data usage and access
 d) Allow users to view or delete their analytics data per Section 12 of the Digital Personal Data Protection Act, 2023 (India)
 e) Maintain records of data processing activities if required under applicable law</div>
-    </div>
-  </div>
 </section>
-
-<section id="8-patent-protection" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h2 class="text-xl font-semibold mb-3 text-latte-text dark:text-mocha-text">
-      <a href="#8-patent-protection" class="hover:text-latte-blue dark:hover:text-mocha-blue">8. PATENT PROTECTION</a>
-    </h2>
-  </div>
+<section id="8-patent-protection" class="license-section mb-6 scroll-mt-16">
+<h3 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#8-patent-protection">8. PATENT PROTECTION</a></h3>
 </section>
-
-<section id="8-1-patent-grant" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#8-1-patent-grant" class="hover:text-latte-blue dark:hover:text-mocha-blue">8.1 Patent Grant</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">Contributors grant broad patent rights:
+<section id="8-1-patent-grant" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#8-1-patent-grant">8.1 Patent Grant</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">Contributors grant broad patent rights:
 
 a) Worldwide, royalty-free patent license
 b) Covers all patent claims necessarily infringed by the Software
 c) Allows making, using, selling, and distributing the Software
 d) Non-revocable upon license compliance
 e) Subject to the Patents Act, 1970 (India) and equivalent patent laws</div>
-    </div>
-  </div>
 </section>
-
-<section id="8-2-patent-retaliation" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#8-2-patent-retaliation" class="hover:text-latte-blue dark:hover:text-mocha-blue">8.2 Patent Retaliation</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">If you initiate patent litigation claiming the Software infringes your patents:
+<section id="8-2-patent-retaliation" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#8-2-patent-retaliation">8.2 Patent Retaliation</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">If you initiate patent litigation claiming the Software infringes your patents:
 
 a) The lawsuit is immediately dismissed
 b) Your license to use the Software continues for existing and future deployments</div>
-    </div>
-  </div>
 </section>
-
-<section id="8-3-trademark-exclusion" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#8-3-trademark-exclusion" class="hover:text-latte-blue dark:hover:text-mocha-blue">8.3 Trademark Exclusion</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">This license does not grant:
+<section id="8-3-trademark-exclusion" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#8-3-trademark-exclusion">8.3 Trademark Exclusion</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">This license does not grant:
 
 a) Rights to trademarks, logos, or brand names protected under the Trade Marks Act, 1999 (India)
 b) Right to imply endorsement by original authors
 c) Any trademark licenses</div>
-    </div>
-  </div>
 </section>
-
-<section id="9-warranty-disclaimer" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h2 class="text-xl font-semibold mb-3 text-latte-text dark:text-mocha-text">
-      <a href="#9-warranty-disclaimer" class="hover:text-latte-blue dark:hover:text-mocha-blue">9. WARRANTY DISCLAIMER</a>
-    </h2>
-  </div>
+<section id="9-warranty-disclaimer" class="license-section mb-6 scroll-mt-16">
+<h3 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#9-warranty-disclaimer">9. WARRANTY DISCLAIMER</a></h3>
 </section>
-
-<section id="9-1-no-warranty" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#9-1-no-warranty" class="hover:text-latte-blue dark:hover:text-mocha-blue">9.1 No Warranty</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">THE SOFTWARE IS PROVIDED &quot;AS IS&quot; WITHOUT WARRANTY OF ANY KIND:
+<section id="9-1-no-warranty" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#9-1-no-warranty">9.1 No Warranty</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">THE SOFTWARE IS PROVIDED &quot;AS IS&quot; WITHOUT WARRANTY OF ANY KIND:
 
 a) No guarantee of fitness for purpose
 b) No guarantee of merchantability
@@ -817,62 +279,21 @@ d) No guarantee of non-infringement
 e) No guarantee of security or data protection
 
 This disclaimer is made to the fullest extent permitted under the Indian Contract Act, 1872 and applicable law.</div>
-    </div>
-  </div>
 </section>
-
-<section id="9-2-user-responsibility" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#9-2-user-responsibility" class="hover:text-latte-blue dark:hover:text-mocha-blue">9.2 User Responsibility</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">a) Use the Software at your own risk
+<section id="9-2-user-responsibility" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#9-2-user-responsibility">9.2 User Responsibility</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">a) Use the Software at your own risk
 b) Responsible for testing and validation
 c) Responsible for backup and disaster recovery
 d) Responsible for security measures
 e) Responsible for compliance with applicable laws</div>
-    </div>
-  </div>
 </section>
-
-<section id="10-limitation-of-liability" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h2 class="text-xl font-semibold mb-3 text-latte-text dark:text-mocha-text">
-      <a href="#10-limitation-of-liability" class="hover:text-latte-blue dark:hover:text-mocha-blue">10. LIMITATION OF LIABILITY</a>
-    </h2>
-  </div>
+<section id="10-limitation-of-liability" class="license-section mb-6 scroll-mt-16">
+<h3 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#10-limitation-of-liability">10. LIMITATION OF LIABILITY</a></h3>
 </section>
-
-<section id="10-1-no-liability" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#10-1-no-liability" class="hover:text-latte-blue dark:hover:text-mocha-blue">10.1 No Liability</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">Contributors and copyright holders are not liable for:
+<section id="10-1-no-liability" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#10-1-no-liability">10.1 No Liability</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">Contributors and copyright holders are not liable for:
 
 a) Direct damages from using the Software
 b) Indirect or consequential damages
@@ -882,90 +303,31 @@ e) Security breaches or data loss
 f) Any damages exceeding amounts paid for the Software
 
 This limitation applies to the fullest extent permitted under the Indian Contract Act, 1872, the Information Technology Act, 2000, and applicable law.</div>
-    </div>
-  </div>
 </section>
-
-<section id="10-2-legal-maximum" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#10-2-legal-maximum" class="hover:text-latte-blue dark:hover:text-mocha-blue">10.2 Legal Maximum</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">Where jurisdictions prohibit limiting liability:
+<section id="10-2-legal-maximum" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#10-2-legal-maximum">10.2 Legal Maximum</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">Where jurisdictions prohibit limiting liability:
 
 a) Liability is limited to the maximum extent permitted by law
 b) Mandatory consumer protections under the Consumer Protection Act, 2019 (India) apply where required
 c) This license does not exclude liability for death or personal injury caused by negligence, fraud, or fraudulent misrepresentation</div>
-    </div>
-  </div>
 </section>
-
-<section id="11-termination" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h2 class="text-xl font-semibold mb-3 text-latte-text dark:text-mocha-text">
-      <a href="#11-termination" class="hover:text-latte-blue dark:hover:text-mocha-blue">11. TERMINATION</a>
-    </h2>
-  </div>
+<section id="11-termination" class="license-section mb-6 scroll-mt-16">
+<h3 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#11-termination">11. TERMINATION</a></h3>
 </section>
-
-<section id="11-1-automatic-termination" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#11-1-automatic-termination" class="hover:text-latte-blue dark:hover:text-mocha-blue">11.1 Automatic Termination</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">Your license automatically terminates if you:
+<section id="11-1-automatic-termination" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#11-1-automatic-termination">11.1 Automatic Termination</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">Your license automatically terminates if you:
 
 a) Violate any term of this license
 b) Fail to make source code available as required
 c) Add restrictions that conflict with this license
 d) Infringe the copyright as defined under the Copyright Act, 1957 (India)
 e) Use the Software for AI Training in violation of Section 2.4 and Section 13.2</div>
-    </div>
-  </div>
 </section>
-
-<section id="11-2-reinstatement" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#11-2-reinstatement" class="hover:text-latte-blue dark:hover:text-mocha-blue">11.2 Reinstatement</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">Upon license violation:
+<section id="11-2-reinstatement" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#11-2-reinstatement">11.2 Reinstatement</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">Upon license violation:
 
 a) For violations OTHER THAN AI Training:
    i) You have 7 business days to correct the violation after being notified
@@ -980,191 +342,55 @@ b) For AI Training violations:
    iii) This termination is non-negotiable and irreversible
 
 c) In all cases, others who received the Software from you are not affected, provided they are in compliance</div>
-    </div>
-  </div>
 </section>
-
-<section id="12-general-provisions" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h2 class="text-xl font-semibold mb-3 text-latte-text dark:text-mocha-text">
-      <a href="#12-general-provisions" class="hover:text-latte-blue dark:hover:text-mocha-blue">12. GENERAL PROVISIONS</a>
-    </h2>
-  </div>
+<section id="12-general-provisions" class="license-section mb-6 scroll-mt-16">
+<h3 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#12-general-provisions">12. GENERAL PROVISIONS</a></h3>
 </section>
-
-<section id="12-1-license-compatibility" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#12-1-license-compatibility" class="hover:text-latte-blue dark:hover:text-mocha-blue">12.1 License Compatibility</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">This license is compatible with:
+<section id="12-1-license-compatibility" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#12-1-license-compatibility">12.1 License Compatibility</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">This license is compatible with:
 
 a) GPL v3 or later
 b) AGPL v3 or later
 c) Similar strong copyleft licenses
 
 You shall not combine this Software with proprietary software in a manner circumventing copyleft requirements.</div>
-    </div>
-  </div>
 </section>
-
-<section id="12-2-severability" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#12-2-severability" class="hover:text-latte-blue dark:hover:text-mocha-blue">12.2 Severability</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">If any provision is found unenforceable:
+<section id="12-2-severability" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#12-2-severability">12.2 Severability</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">If any provision is found unenforceable:
 
 a) The remainder of the license remains in effect
 b) The unenforceable provision is modified minimally to make it enforceable
 c) The intent of the license is preserved</div>
-    </div>
-  </div>
 </section>
-
-<section id="12-3-no-waiver" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#12-3-no-waiver" class="hover:text-latte-blue dark:hover:text-mocha-blue">12.3 No Waiver</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">Failure to enforce any provision does not waive the right to enforce it subsequently.</div>
-    </div>
-  </div>
+<section id="12-3-no-waiver" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#12-3-no-waiver">12.3 No Waiver</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">Failure to enforce any provision does not waive the right to enforce it subsequently.</div>
 </section>
-
-<section id="12-4-entire-agreement" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#12-4-entire-agreement" class="hover:text-latte-blue dark:hover:text-mocha-blue">12.4 Entire Agreement</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">This license constitutes the complete agreement regarding the Software. No other terms apply unless in writing and signed by the copyright holder.</div>
-    </div>
-  </div>
+<section id="12-4-entire-agreement" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#12-4-entire-agreement">12.4 Entire Agreement</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">This license constitutes the complete agreement regarding the Software. No other terms apply unless in writing and signed by the copyright holder.</div>
 </section>
-
-<section id="12-5-minor-protection-and-conduct" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#12-5-minor-protection-and-conduct" class="hover:text-latte-blue dark:hover:text-mocha-blue">12.5 Minor Protection and Conduct</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">a) The Software shall not be used to create, distribute, or facilitate content that is obscene, vulgar, or inappropriate for minors
+<section id="12-5-minor-protection-and-conduct" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#12-5-minor-protection-and-conduct">12.5 Minor Protection and Conduct</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">a) The Software shall not be used to create, distribute, or facilitate content that is obscene, vulgar, or inappropriate for minors
 b) Distributors and users must ensure the Software complies with applicable laws protecting minors, including the Protection of Children from Sexual Offences Act, 2012 (India) and similar legislation in other jurisdictions
 c) The Software shall not be used to harass, abuse, or engage in vulgar communication
 d) Violation of these conduct requirements may result in license termination as specified in Section 11</div>
-    </div>
-  </div>
 </section>
-
-<section id="12-6-governing-law-and-jurisdiction" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#12-6-governing-law-and-jurisdiction" class="hover:text-latte-blue dark:hover:text-mocha-blue">12.6 Governing Law and Jurisdiction</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">a) This license is governed by the laws of India, including but not limited to the Copyright Act, 1957, the Information Technology Act, 2000, the Patents Act, 1970, the Trade Marks Act, 1999, the Digital Personal Data Protection Act, 2023, and the Indian Contract Act, 1872
+<section id="12-6-governing-law-and-jurisdiction" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#12-6-governing-law-and-jurisdiction">12.6 Governing Law and Jurisdiction</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">a) This license is governed by the laws of India, including but not limited to the Copyright Act, 1957, the Information Technology Act, 2000, the Patents Act, 1970, the Trade Marks Act, 1999, the Digital Personal Data Protection Act, 2023, and the Indian Contract Act, 1872
 b) Any disputes arising from this license shall be subject to the exclusive jurisdiction of the courts in India
 c) The parties agree to submit to the jurisdiction of Indian courts without regard to conflict of law principles</div>
-    </div>
-  </div>
 </section>
-
-<section id="13-compliance-with-indian-law" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h2 class="text-xl font-semibold mb-3 text-latte-text dark:text-mocha-text">
-      <a href="#13-compliance-with-indian-law" class="hover:text-latte-blue dark:hover:text-mocha-blue">13. COMPLIANCE WITH INDIAN LAW</a>
-    </h2>
-  </div>
+<section id="13-compliance-with-indian-law" class="license-section mb-6 scroll-mt-16">
+<h3 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#13-compliance-with-indian-law">13. COMPLIANCE WITH INDIAN LAW</a></h3>
 </section>
-
-<section id="13-1-statutory-compliance" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#13-1-statutory-compliance" class="hover:text-latte-blue dark:hover:text-mocha-blue">13.1 Statutory Compliance</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">Users and distributors must ensure compliance with:
+<section id="13-1-statutory-compliance" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#13-1-statutory-compliance">13.1 Statutory Compliance</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">Users and distributors must ensure compliance with:
 
 a) Copyright Act, 1957 (India)
 b) Information Technology Act, 2000 and related rules for electronic records and data security
@@ -1173,28 +399,10 @@ d) Patents Act, 1970 (India)
 e) Consumer Protection Act, 2019 (India)
 f) Indian Penal Code, 1860, Sections 43, 43A, and 66
 g) Other applicable laws and regulations</div>
-    </div>
-  </div>
 </section>
-
-<section id="13-2-prohibition-of-ai-training-and-restrictions-on-ai-generated-code" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#13-2-prohibition-of-ai-training-and-restrictions-on-ai-generated-code" class="hover:text-latte-blue dark:hover:text-mocha-blue">13.2 Prohibition of AI Training and Restrictions on AI-Generated Code</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">13.2.1 Absolute Prohibition on AI Training
+<section id="13-2-prohibition-of-ai-training-and-restrictions-on-ai-generated-code" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#13-2-prohibition-of-ai-training-and-restrictions-on-ai-generated-code">13.2 Prohibition of AI Training and Restrictions on AI-Generated Code</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">13.2.1 Absolute Prohibition on AI Training
 
 The use of this Software for AI Training is STRICTLY PROHIBITED:
 
@@ -1277,28 +485,10 @@ a) The burden of proof is on the accused party to demonstrate they did NOT use t
 b) Circumstantial evidence (such as similarity of generated code to the Software) may be sufficient to establish a prima facie case of violation
 c) AI companies must provide transparent access to their training data lists and exclusion mechanisms
 d) Failure to maintain adequate records of training data sources will be considered evidence of potential violation</div>
-    </div>
-  </div>
 </section>
-
-<section id="13-3-plagiarism-and-attribution" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#13-3-plagiarism-and-attribution" class="hover:text-latte-blue dark:hover:text-mocha-blue">13.3 Plagiarism and Attribution</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">To prevent plagiarism and ensure proper attribution:
+<section id="13-3-plagiarism-and-attribution" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#13-3-plagiarism-and-attribution">13.3 Plagiarism and Attribution</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">To prevent plagiarism and ensure proper attribution:
 
 a) All contributions must be original work or properly licensed with appropriate attribution as required under Section 57 of the Copyright Act, 1957 (India)
 b) Do not copy code without proper licensing rights and attribution
@@ -1311,50 +501,14 @@ f) When incorporating code from other FOSS projects:
    iii) Document source and license of incorporated code
    iv) Ensure compliance with original license terms
 g) False attribution may constitute fraud under the Indian Penal Code, 1860 and copyright infringement under the Copyright Act, 1957 (India)</div>
-    </div>
-  </div>
 </section>
-
-<section id="13-4-export-control" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h3 class="text-lg font-medium mb-2 text-latte-text dark:text-mocha-text">
-      <a href="#13-4-export-control" class="hover:text-latte-blue dark:hover:text-mocha-blue">13.4 Export Control</a>
-    </h3>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">Distribution may be subject to the Information Technology Act, 2000 and export control laws of India or other jurisdictions. Users are responsible for compliance.</div>
-    </div>
-  </div>
+<section id="13-4-export-control" class="license-section mb-6 scroll-mt-16">
+<h4 class="font-medium text-latte-subtext1 dark:text-mocha-subtext1"><a href="#13-4-export-control">13.4 Export Control</a></h4>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">Distribution may be subject to the Information Technology Act, 2000 and export control laws of India or other jurisdictions. Users are responsible for compliance.</div>
 </section>
-
-<section id="14-application" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h2 class="text-xl font-semibold mb-3 text-latte-text dark:text-mocha-text">
-      <a href="#14-application" class="hover:text-latte-blue dark:hover:text-mocha-blue">14. APPLICATION</a>
-    </h2>
-  </div>
-  <div class="license-body whitespace-pre-wrap text-sm leading-relaxed text-latte-subtext0 dark:text-mocha-subtext0" x-data="copyable">
-    <div class="relative">
-      <button
-        type="button"
-        class="no-print absolute right-0 top-0 rounded p-1 text-latte-overlay1 hover:text-latte-text dark:text-mocha-overlay1 dark:hover:text-mocha-text"
-        aria-label="Copy section text"
-        @click="copy($el.parentElement.querySelector('.section-text').textContent)"
-      >
-        <svg x-show="!copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-        <svg x-show="copied" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
-      </button>
-      <div class="section-text pr-8">To apply the 4License:
+<section id="14-application" class="license-section mb-6 scroll-mt-16">
+<h3 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#14-application">14. APPLICATION</a></h3>
+<div class="license-body whitespace-pre-wrap text-latte-subtext0 dark:text-mocha-subtext0">To apply the 4License:
 
 1. Include the full license text in a LICENSE file
 2. Add this header to each source file:
@@ -1371,19 +525,10 @@ SPDX-License-Identifier: 4License
    - Analytics collection (if any)
 
 SPDX-License-Identifier: 4License</div>
-    </div>
-  </div>
+</section>
+<section id="end-of-license" class="license-section mb-6 scroll-mt-16">
+<h3 class="font-semibold text-latte-text dark:text-mocha-text"><a href="#end-of-license">END OF LICENSE</a></h3>
 </section>
 
-<section id="end-of-license" class="license-section mb-8 scroll-mt-20">
-  <div class="flex items-start gap-2">
-    <h2 class="text-xl font-semibold mb-3 text-latte-text dark:text-mocha-text">
-      <a href="#end-of-license" class="hover:text-latte-blue dark:hover:text-mocha-blue">END OF LICENSE</a>
-    </h2>
-  </div>
-</section>
-
-
-    </article>
-  </div>
+  </article>
 </div>
