@@ -1,0 +1,77 @@
+<header
+  class="no-print sticky top-0 z-50 border-b border-latte-surface1 bg-latte-mantle/95 backdrop-blur supports-[backdrop-filter]:bg-latte-mantle/80 dark:border-mocha-surface1 dark:bg-mocha-mantle/95 dark:supports-[backdrop-filter]:bg-mocha-mantle/80"
+  x-data
+>
+  <nav class="mx-auto flex max-w-5xl items-center justify-between px-4 py-3" aria-label="Main navigation">
+    <a
+      href="{{ '/' | relative_url }}"
+      class="text-lg font-bold text-latte-text hover:text-latte-blue dark:text-mocha-text dark:hover:text-mocha-blue"
+    >
+      HOPL
+    </a>
+
+    <div class="flex items-center gap-4">
+      <a
+        href="{{ '/' | relative_url }}"
+        class="text-sm font-medium text-latte-subtext1 hover:text-latte-text dark:text-mocha-subtext1 dark:hover:text-mocha-text"
+      >
+        Home
+      </a>
+      <a
+        href="{{ '/license/' | relative_url }}"
+        class="text-sm font-medium text-latte-subtext1 hover:text-latte-text dark:text-mocha-subtext1 dark:hover:text-mocha-text"
+      >
+        License
+      </a>
+
+      <!-- Theme toggle -->
+      <button
+        type="button"
+        class="rounded-lg p-2 text-latte-overlay1 hover:bg-latte-surface0 hover:text-latte-text focus:outline-none focus:ring-2 focus:ring-latte-blue dark:text-mocha-overlay1 dark:hover:bg-mocha-surface0 dark:hover:text-mocha-text dark:focus:ring-mocha-blue"
+        aria-label="Toggle theme"
+        @click="$store.theme.toggle()"
+      >
+        <!-- Sun icon (shown in dark mode) -->
+        <svg
+          x-show="$store.theme.dark"
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2"></path>
+          <path d="M12 20v2"></path>
+          <path d="m4.93 4.93 1.41 1.41"></path>
+          <path d="m17.66 17.66 1.41 1.41"></path>
+          <path d="M2 12h2"></path>
+          <path d="M20 12h2"></path>
+          <path d="m6.34 17.66-1.41 1.41"></path>
+          <path d="m19.07 4.93-1.41 1.41"></path>
+        </svg>
+        <!-- Moon icon (shown in light mode) -->
+        <svg
+          x-show="!$store.theme.dark"
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+</header>

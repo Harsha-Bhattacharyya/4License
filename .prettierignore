@@ -1,0 +1,7 @@
+node_modules
+_site
+assets/dist
+.jekyll-cache
+generated
+*.html
+Gemfile.lock

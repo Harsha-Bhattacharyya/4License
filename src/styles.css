@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Light theme (Catppuccin Latte) — default */
+  :root {
+    --color-base: 239 241 245;
+    --color-mantle: 230 233 239;
+    --color-crust: 220 224 232;
+    --color-text: 76 79 105;
+    --color-subtext1: 92 95 119;
+    --color-subtext0: 108 111 133;
+    --color-overlay2: 124 127 147;
+    --color-overlay1: 140 143 161;
+    --color-overlay0: 156 160 176;
+    --color-surface2: 172 176 190;
+    --color-surface1: 188 192 204;
+    --color-surface0: 204 208 218;
+    --color-blue: 30 102 245;
+    --color-lavender: 114 135 253;
+    --color-sapphire: 32 159 181;
+    --color-teal: 23 146 153;
+    --color-green: 64 160 43;
+    --color-yellow: 223 142 29;
+    --color-peach: 254 100 11;
+    --color-red: 210 15 57;
+    --color-mauve: 136 57 239;
+    --color-pink: 234 118 203;
+    --color-flamingo: 221 120 120;
+    --color-rosewater: 220 138 120;
+  }
+
+  /* Dark theme (Catppuccin Mocha) */
+  .dark {
+    --color-base: 30 30 46;
+    --color-mantle: 24 24 37;
+    --color-crust: 17 17 27;
+    --color-text: 205 214 244;
+    --color-subtext1: 186 194 222;
+    --color-subtext0: 166 173 200;
+    --color-overlay2: 147 153 178;
+    --color-overlay1: 127 132 156;
+    --color-overlay0: 108 112 134;
+    --color-surface2: 88 91 112;
+    --color-surface1: 69 71 90;
+    --color-surface0: 49 50 68;
+    --color-blue: 137 180 250;
+    --color-lavender: 180 190 254;
+    --color-sapphire: 116 199 236;
+    --color-teal: 148 226 213;
+    --color-green: 166 227 161;
+    --color-yellow: 249 226 175;
+    --color-peach: 250 179 135;
+    --color-red: 243 139 168;
+    --color-mauve: 203 166 247;
+    --color-pink: 245 194 231;
+    --color-flamingo: 242 205 205;
+    --color-rosewater: 245 224 220;
+  }
+
+  body {
+    @apply bg-latte-base text-latte-text;
+
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+      "Liberation Sans", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .dark body {
+    @apply bg-mocha-base text-mocha-text;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium
+      transition-colors duration-150 focus:outline-none focus:ring-2
+      focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-latte-blue text-latte-base hover:bg-latte-sapphire
+      focus:ring-latte-blue;
+  }
+
+  .dark .btn-primary {
+    @apply bg-mocha-blue text-mocha-base hover:bg-mocha-sapphire
+      focus:ring-mocha-blue;
+  }
+
+  .card {
+    @apply rounded-xl border p-6;
+    @apply border-latte-surface1 bg-latte-mantle;
+  }
+
+  .dark .card {
+    @apply border-mocha-surface1 bg-mocha-mantle;
+  }
+
+  /* Print styles for legal text */
+  @media print {
+    body {
+      color: #000 !important;
+      background: #fff !important;
+      font-size: 11pt;
+      line-height: 1.5;
+    }
+
+    .no-print {
+      display: none !important;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    h1,
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+
+    .license-section {
+      page-break-inside: avoid;
+    }
+  }
+}

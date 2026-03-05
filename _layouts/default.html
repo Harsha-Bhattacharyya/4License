@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}" />
+
+    <!-- Prevent flash of incorrect theme -->
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme");
+        var d =
+          t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        if (d) document.documentElement.classList.add("dark");
+      })();
+    </script>
+
+    <link rel="stylesheet" href="{{ site.data.manifest.main_css }}" />
+  </head>
+  <body class="min-h-screen bg-latte-base text-latte-text dark:bg-mocha-base dark:text-mocha-text">
+    {% include header.html %}
+
+    <main id="main-content">{{ content }}</main>
+
+    {% include footer.html %}
+
+    <script src="{{ site.data.manifest.main_js }}" defer></script>
+  </body>
+</html>
