@@ -6,25 +6,27 @@
  *
  * Output is deterministic and UTF-8 safe.
  */
-const fs = require("fs");
-const path = require("path");
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
+import { resolve, dirname } from "path";
+import { fileURLToPath } from "url";
 
-const ROOT = path.resolve(__dirname, "..");
-const SRC = path.join(ROOT, "LICENSE.en-US");
-const OUT_DIR = path.join(ROOT, "generated");
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = resolve(__dirname, "..");
+const SRC = resolve(ROOT, "LICENSE.en-US");
+const OUT_DIR = resolve(ROOT, "generated");
 
 const HEADER_NOTICE =
   "This file was auto-generated from LICENSE.en-US. Do not edit manually.\n" +
   "Regenerate with: npm run license:build\n";
 
 function ensureDir(dir) {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+  if (!existsSync(dir)) {
+    mkdirSync(dir, { recursive: true });
   }
 }
 
 function readLicense() {
-  return fs.readFileSync(SRC, "utf-8");
+  return readFileSync(SRC, "utf-8");
 }
 
 /** Convert plain text license to Markdown. */
@@ -233,7 +235,7 @@ function toBase64(rawBuffer) {
 function main() {
   ensureDir(OUT_DIR);
   const text = readLicense();
-  const rawBuffer = fs.readFileSync(SRC);
+  const rawBuffer = readFileSync(SRC);
 
   const outputs = [
     { name: "License.en_US.md", content: toMarkdown(text) },
@@ -243,8 +245,8 @@ function main() {
   ];
 
   for (const { name, content } of outputs) {
-    const outPath = path.join(OUT_DIR, name);
-    fs.writeFileSync(outPath, content, "utf-8");
+    const outPath = resolve(OUT_DIR, name);
+    writeFileSync(outPath, content, "utf-8");
     console.log(`Generated ${outPath}`);
   }
 }

@@ -1,8 +1,11 @@
+# Package
 node_modules
-_site
-assets/dist
-.jekyll-cache
+package-lock.json
+
+# Build
+build
+.svelte-kit
+
+# Generated
 generated
-_data
-*.html
-Gemfile.lock
+src/lib/hashes.json

@@ -2,10 +2,8 @@
 node_modules/
 
 # Build output
-_site/
-assets/dist/
-.jekyll-cache/
-.jekyll-metadata
+/build
+/.svelte-kit
 
 # OS files
 .DS_Store
@@ -20,8 +18,6 @@ Thumbs.db
 
 # Logs
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Environment
 .env
