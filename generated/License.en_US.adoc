@@ -1,0 +1,554 @@
+// This file was auto-generated from LICENSE.en-US. Do not edit manually.
+// Regenerate with: npm run license:build
+// 
+
+= Human Only Public License (HOPL)
+
+Copyright (c) 2026 Harsha Bhattacharyya
+
+Permission is granted to copy and distribute verbatim copies of this license document without modification. Changing this license text is not permitted.
+
+
+== PREAMBLE
+
+This license ensures software freedom, user rights, and sustainable development through strong copyleft protections that benefit all users while preventing vendor lock-in and feature degradation.
+
+
+== 1. DEFINITIONS
+
+"Software" means the original work licensed under this license, including source code, documentation, and associated materials.
+
+"Derivative Work" means any modification, enhancement, translation, or work based on the Software.
+
+"Distribution" means providing the Software or Derivative Works to others, whether for free or for payment.
+
+"Self-Hostable" means the ability to install, run, and maintain the Software on infrastructure you control, without requiring external services or vendor approval.
+
+"Source Code" means the preferred form for making modifications, including build scripts, configuration files, and installation instructions.
+
+"Freemium Model" means offering a base version for free with optional paid upgrades or features.
+
+"FOSS" (Free and Open Source Software) means software with licenses approved by the Open Source Initiative or Free Software Foundation.
+
+"AI Training" means the use of the Software, its source code, documentation, or associated materials as training data for artificial intelligence systems, machine learning models, large language models (LLMs), neural networks, or any automated code generation systems.
+
+"AI Model" means any artificial intelligence system, machine learning model, large language model, neural network, or automated system capable of generating, suggesting, or synthesizing code, text, or other content based on training data.
+
+
+== 2. GRANT OF RIGHTS
+
+Subject to the conditions below, you are granted:
+
+
+=== 2.1 Usage Rights
+- Use the Software for any lawful purpose
+- Operate the Software on any infrastructure
+- Deploy the Software in production environments
+
+
+=== 2.2 Modification Rights
+- Modify the Software as needed
+- Enhance or repair the Software
+- Integrate the Software with other works
+
+
+=== 2.3 Distribution Rights
+- Copy and distribute the Software
+- Publish the Software on any platform
+- Sublicense under this license
+- Commercialize the Software and related services
+
+
+=== 2.4 Restrictions on AI Training
+
+The following uses are EXPLICITLY PROHIBITED:
+
+a) Using the Software or any part thereof as training data for AI Models
+b) Scraping, mining, or extracting the Software's code or documentation for AI Training purposes
+c) Including the Software in datasets used to train, fine-tune, or improve AI Models
+d) Using the Software to create or enhance code generation tools, AI assistants, or automated programming systems
+e) Feeding the Software into any system that learns from it to generate similar or derivative code
+f) Creating embeddings, vectors, or other representations of the Software for AI Training
+g) Using the Software in any automated system that generates code based on learned patterns
+
+This prohibition applies to:
+- Commercial AI training (e.g., GitHub Copilot, ChatGPT, Claude, Bard, etc.)
+- Research AI training (academic or non-profit)
+- Internal AI systems within organizations
+- Open source AI models and datasets
+- Any future AI technologies with similar capabilities
+
+
+=== 2.5 Patent Grant
+Any contributor grants you a worldwide, royalty-free, non-exclusive patent license to use, make, have made, sell, and import the Software. This license covers all patent claims that the contributor can license and that are necessarily infringed by the Software. This grant is subject to the Patents Act, 1970 (India) and equivalent patent laws in other jurisdictions.
+
+
+== 3. CONDITIONS AND REQUIREMENTS
+
+
+=== 3.1 Source Code Retention
+
+When distributing source code, you must:
+
+a) Preserve the original copyright notice as required under Section 57 of the Copyright Act, 1957 (India)
+b) Include this complete license text
+c) Maintain all warranty disclaimers
+d) Credit original authors
+e) Document modifications with dates
+
+
+=== 3.2 Binary Distribution
+
+When distributing compiled or binary versions, you must:
+
+a) Include this license in documentation or a LICENSE file
+b) Reproduce copyright notices in user documentation as required under the Copyright Act, 1957 (India)
+c) Provide instructions for obtaining source code
+d) Include all warranty disclaimers
+
+
+=== 3.3 Copyleft Requirement
+
+All Derivative Works must:
+
+a) Be licensed under the 4License
+b) Have complete source code publicly available upon distribution
+c) Be accessible from a public repository or website
+d) Not impose additional restrictions limiting the rights granted herein
+
+
+=== 3.4 Feature Perpetuity
+
+All features must remain perpetually accessible:
+
+a) Features added to Derivative Works must remain available in all subsequent versions
+b) Features shall not be removed, paywalled, or degraded
+c) Users must retain access to all historical features
+d) This applies to functionality, not specific implementations
+
+
+== 4. SELF-HOSTING MANDATE
+
+
+=== 4.1 Core Requirement
+
+The Software and all Derivative Works must be self-hostable:
+
+a) Users must be able to install and operate the Software on their own infrastructure
+b) Core functionality shall not require connection to vendor-controlled servers
+c) All APIs, databases, and services must have self-hostable alternatives
+d) Complete installation documentation must be provided
+
+
+=== 4.2 Development Requirements
+
+Development must avoid vendor lock-in:
+
+a) Use only FOSS dependencies
+b) Proprietary development tools are permitted
+c) Do not require proprietary services for building or testing
+d) Provide reproducible build instructions
+
+
+== 5. FREEMIUM MODEL PROTECTIONS
+
+
+=== 5.1 Free Tier Permanence
+
+If adopting a freemium business model:
+
+a) Features that are free must remain free perpetually
+b) Free features shall not be moved to paid tiers
+c) This requirement applies to all Derivative Works and future versions
+d) Free tier capacity may be limited, but feature access shall not
+e) Changes to free tier features may constitute unfair trade practice under the Consumer Protection Act, 2019 (India)
+
+
+=== 5.2 Trial Prohibition
+
+Time-limited trials are prohibited:
+
+a) Full features shall not be offered for limited time then require payment
+b) Features must be either free perpetually or paid from inception
+c) This prevents bait-and-switch tactics that may violate the Consumer Protection Act, 2019 (India)
+
+
+=== 5.3 Demonstration Exception
+
+Limited demonstrations are permitted:
+
+a) Specific, clearly-marked demonstrations may be offered
+b) Demonstrations must be explicitly labeled, not as trials
+c) Demonstrations may have limited functionality to showcase features
+d) Demonstrations shall not have time limits
+
+
+== 6. USER SOVEREIGNTY AND PERPETUAL ACCESS
+
+
+=== 6.1 Access Rights
+
+a) Users have the right to access all previously accessible features indefinitely
+b) Features shall not be remotely disabled or degraded
+c) Users must be able to use older versions without forced updates
+
+
+=== 6.2 Data Sovereignty
+
+a) Users must be able to export all data in standard formats as required under Section 11 of the Digital Personal Data Protection Act, 2023 (India)
+b) Proprietary lock-in of user data is prohibited
+c) Data migration tools must be provided
+d) Users own all data created using the Software
+
+
+== 7. PRIVACY AND ANALYTICS
+
+
+=== 7.1 Permitted Analytics
+
+Optional, aggregate, anonymized usage telemetry for project improvement may include:
+
+a) Crash reports and error logs without personal data
+b) Feature usage statistics, anonymized and aggregated
+c) Performance metrics
+d) General installation and deployment information
+
+
+=== 7.2 Privacy Requirements
+
+All analytics must comply with applicable data protection laws:
+
+a) Opt-in Only: Analytics must be disabled by default, requiring explicit user consent as mandated by Section 6 of the Digital Personal Data Protection Act, 2023 (India)
+b) No Personal Information: Names, emails, IP addresses, or identifying data shall not be collected without explicit consent under the Digital Personal Data Protection Act, 2023 (India)
+c) Self-Hostable Disable: Users must be able to completely disable all telemetry and exercise their right to withdraw consent under Section 6 of the Digital Personal Data Protection Act, 2023 (India)
+d) Auditable Collection: Analytics collection code must be open source and auditable
+e) Legal Compliance: Must comply with the Digital Personal Data Protection Act, 2023 (India), General Data Protection Regulation (EU) 2016/679 (GDPR), and similar privacy laws
+
+
+=== 7.3 Transparency
+
+a) Clearly document collected data in accordance with Section 5 of the Digital Personal Data Protection Act, 2023 (India)
+b) Provide examples of collected data
+c) Explain data usage and access
+d) Allow users to view or delete their analytics data per Section 12 of the Digital Personal Data Protection Act, 2023 (India)
+e) Maintain records of data processing activities if required under applicable law
+
+
+== 8. PATENT PROTECTION
+
+
+=== 8.1 Patent Grant
+
+Contributors grant broad patent rights:
+
+a) Worldwide, royalty-free patent license
+b) Covers all patent claims necessarily infringed by the Software
+c) Allows making, using, selling, and distributing the Software
+d) Non-revocable upon license compliance
+e) Subject to the Patents Act, 1970 (India) and equivalent patent laws
+
+
+=== 8.2 Patent Retaliation
+
+If you initiate patent litigation claiming the Software infringes your patents:
+
+a) The lawsuit is immediately dismissed
+b) Your license to use the Software continues for existing and future deployments
+
+
+=== 8.3 Trademark Exclusion
+
+This license does not grant:
+
+a) Rights to trademarks, logos, or brand names protected under the Trade Marks Act, 1999 (India)
+b) Right to imply endorsement by original authors
+c) Any trademark licenses
+
+
+== 9. WARRANTY DISCLAIMER
+
+
+=== 9.1 No Warranty
+
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND:
+
+a) No guarantee of fitness for purpose
+b) No guarantee of merchantability
+c) No guarantee of error-free operation
+d) No guarantee of non-infringement
+e) No guarantee of security or data protection
+
+This disclaimer is made to the fullest extent permitted under the Indian Contract Act, 1872 and applicable law.
+
+
+=== 9.2 User Responsibility
+
+a) Use the Software at your own risk
+b) Responsible for testing and validation
+c) Responsible for backup and disaster recovery
+d) Responsible for security measures
+e) Responsible for compliance with applicable laws
+
+
+== 10. LIMITATION OF LIABILITY
+
+
+=== 10.1 No Liability
+
+Contributors and copyright holders are not liable for:
+
+a) Direct damages from using the Software
+b) Indirect or consequential damages
+c) Loss of profits, data, or business opportunities
+d) System failures or downtime
+e) Security breaches or data loss
+f) Any damages exceeding amounts paid for the Software
+
+This limitation applies to the fullest extent permitted under the Indian Contract Act, 1872, the Information Technology Act, 2000, and applicable law.
+
+
+=== 10.2 Legal Maximum
+
+Where jurisdictions prohibit limiting liability:
+
+a) Liability is limited to the maximum extent permitted by law
+b) Mandatory consumer protections under the Consumer Protection Act, 2019 (India) apply where required
+c) This license does not exclude liability for death or personal injury caused by negligence, fraud, or fraudulent misrepresentation
+
+
+== 11. TERMINATION
+
+
+=== 11.1 Automatic Termination
+
+Your license automatically terminates if you:
+
+a) Violate any term of this license
+b) Fail to make source code available as required
+c) Add restrictions that conflict with this license
+d) Infringe the copyright as defined under the Copyright Act, 1957 (India)
+e) Use the Software for AI Training in violation of Section 2.4 and Section 13.2
+
+
+=== 11.2 Reinstatement
+
+Upon license violation:
+
+a) For violations OTHER THAN AI Training:
+   i) You have 7 business days to correct the violation after being notified
+   ii) If corrected within 7 business days, your license is automatically reinstated
+   iii) If not corrected within 7 business days, your license is temporarily suspended for 1 month
+   iv) If not corrected within that month, your license is permanently revoked
+   v) If corrected within that month, your license is automatically reinstated
+
+b) For AI Training violations:
+   i) Your license is IMMEDIATELY and PERMANENTLY terminated with NO opportunity for reinstatement
+   ii) You must destroy all copies of the Software and any AI Models trained on it
+   iii) This termination is non-negotiable and irreversible
+
+c) In all cases, others who received the Software from you are not affected, provided they are in compliance
+
+
+== 12. GENERAL PROVISIONS
+
+
+=== 12.1 License Compatibility
+
+This license is compatible with:
+
+a) GPL v3 or later
+b) AGPL v3 or later
+c) Similar strong copyleft licenses
+
+You shall not combine this Software with proprietary software in a manner circumventing copyleft requirements.
+
+
+=== 12.2 Severability
+
+If any provision is found unenforceable:
+
+a) The remainder of the license remains in effect
+b) The unenforceable provision is modified minimally to make it enforceable
+c) The intent of the license is preserved
+
+
+=== 12.3 No Waiver
+
+Failure to enforce any provision does not waive the right to enforce it subsequently.
+
+
+=== 12.4 Entire Agreement
+
+This license constitutes the complete agreement regarding the Software. No other terms apply unless in writing and signed by the copyright holder.
+
+
+=== 12.5 Minor Protection and Conduct
+
+a) The Software shall not be used to create, distribute, or facilitate content that is obscene, vulgar, or inappropriate for minors
+b) Distributors and users must ensure the Software complies with applicable laws protecting minors, including the Protection of Children from Sexual Offences Act, 2012 (India) and similar legislation in other jurisdictions
+c) The Software shall not be used to harass, abuse, or engage in vulgar communication
+d) Violation of these conduct requirements may result in license termination as specified in Section 11
+
+
+=== 12.6 Governing Law and Jurisdiction
+
+a) This license is governed by the laws of India, including but not limited to the Copyright Act, 1957, the Information Technology Act, 2000, the Patents Act, 1970, the Trade Marks Act, 1999, the Digital Personal Data Protection Act, 2023, and the Indian Contract Act, 1872
+b) Any disputes arising from this license shall be subject to the exclusive jurisdiction of the courts in India
+c) The parties agree to submit to the jurisdiction of Indian courts without regard to conflict of law principles
+
+
+== 13. COMPLIANCE WITH INDIAN LAW
+
+
+=== 13.1 Statutory Compliance
+
+Users and distributors must ensure compliance with:
+
+a) Copyright Act, 1957 (India)
+b) Information Technology Act, 2000 and related rules for electronic records and data security
+c) Digital Personal Data Protection Act, 2023
+d) Patents Act, 1970 (India)
+e) Consumer Protection Act, 2019 (India)
+f) Indian Penal Code, 1860, Sections 43, 43A, and 66
+g) Other applicable laws and regulations
+
+
+=== 13.2 Prohibition of AI Training and Restrictions on AI-Generated Code
+
+
+==== 13.2.1 Absolute Prohibition on AI Training
+
+The use of this Software for AI Training is STRICTLY PROHIBITED:
+
+a) You may NOT use the Software, its source code, documentation, comments, or any associated materials as training data for any AI Model
+b) You may NOT scrape, crawl, mine, or extract the Software for the purpose of training, fine-tuning, or improving any AI system
+c) You may NOT include the Software in any dataset, corpus, or collection used for AI Training
+d) You may NOT create derived representations (embeddings, tokens, vectors, etc.) of the Software for AI Training purposes
+e) You may NOT use automated systems to learn from the Software's patterns, structure, or implementation for code generation purposes
+f) This prohibition applies regardless of:
+   i) Whether the AI Training is commercial or non-commercial
+   ii) Whether the resulting AI Model will be proprietary or open source
+   iii) Whether the AI Training is direct or indirect (through intermediary systems)
+   iv) The purpose or intent behind the AI Training
+   v) Whether the Software is used alone or as part of a larger dataset
+
+
+==== 13.2.2 No Exceptions
+
+There are NO exceptions to the AI Training prohibition:
+
+a) Research and academic use for AI Training is NOT permitted
+b) Non-profit AI Training is NOT permitted
+c) Training "open source" AI models is NOT permitted
+d) Fair use or fair dealing defenses do NOT apply to AI Training under this license
+e) Indirect training through third-party services that scrape or aggregate code is NOT permitted
+f) Any use that involves the Software being processed by systems that learn to generate code is prohibited
+
+
+==== 13.2.3 Enforcement and Violation Consequences
+
+Violation of the AI Training prohibition will result in:
+
+a) Immediate and automatic termination of your license with no opportunity for reinstatement
+b) You must immediately cease all use of the Software and destroy all copies in your possession
+c) Any AI Models trained using the Software must be destroyed or retrained without the Software
+d) You may be subject to legal action for copyright infringement under the Copyright Act, 1957 (India) and equivalent laws in other jurisdictions
+e) Statutory damages and injunctive relief may be sought to the fullest extent permitted by law
+f) You will be liable for all costs and legal fees incurred in enforcement actions
+
+
+==== 13.2.4 Restrictions on Using AI-Generated Code
+
+When incorporating AI-generated code into the Software or Derivative Works:
+
+a) You must verify the AI Model that generated the code was NOT trained on this Software or any 4License-licensed software
+b) You must obtain written confirmation from the AI Model provider that the training data did not include 4License-licensed code
+c) All AI-generated code incorporated into the Software or Derivative Works must comply with the Copyright Act, 1957 (India), including provisions regarding authorship and originality
+d) You must verify that AI-generated code does not infringe upon existing copyrights or violate the intellectual property rights of third parties
+e) You must prominently disclose the use of AI tools in generating any significant portions of code (more than 10 lines or any complete function/method)
+f) AI-generated code must not be used to circumvent the copyleft requirements or other obligations of this license
+g) You remain fully responsible for all code in your Derivative Works, regardless of whether it was human-written or AI-generated
+h) If you cannot verify the provenance of the AI Model's training data, you accept full liability for any copyright infringement that may result from using AI-generated code
+
+
+==== 13.2.5 Permitted AI Uses
+
+The following limited uses of AI in conjunction with the Software ARE permitted:
+
+a) Using AI-powered development tools (IDEs, linters, formatters) that do NOT send your code to external servers for training
+b) Using local AI models that run entirely on your own infrastructure and do NOT share data with third parties
+c) Using AI for analyzing your own Derivative Works that you have created, provided the AI system does not retain or learn from the Software
+d) Using AI for security scanning, vulnerability detection, or code quality analysis, provided:
+   i) The analysis is performed for your internal use only
+   ii) The AI system does not retain the Software after analysis
+   iii) The Software is not used to improve the AI system
+   iv) Results are not aggregated with other codebases to train AI Models
+
+
+==== 13.2.6 Transparency Requirements for AI Companies
+
+If you operate an AI company or provide AI-powered development tools:
+
+a) You must maintain and publish a list of all licenses whose code you have EXCLUDED from your training data
+b) You must provide users with the ability to verify that specific repositories or licenses were not included in training
+c) You must implement technical measures to prevent 4License-licensed code from being used in training
+d) You must promptly remove any 4License-licensed code from your training data if discovered
+e) You must notify copyright holders if you discover you have inadvertently trained on 4License-licensed code
+f) You must provide documentation of your compliance measures upon request from copyright holders
+
+
+==== 13.2.7 Burden of Proof
+
+In any dispute regarding AI Training:
+
+a) The burden of proof is on the accused party to demonstrate they did NOT use the Software for AI Training
+b) Circumstantial evidence (such as similarity of generated code to the Software) may be sufficient to establish a prima facie case of violation
+c) AI companies must provide transparent access to their training data lists and exclusion mechanisms
+d) Failure to maintain adequate records of training data sources will be considered evidence of potential violation
+
+
+=== 13.3 Plagiarism and Attribution
+
+To prevent plagiarism and ensure proper attribution:
+
+a) All contributions must be original work or properly licensed with appropriate attribution as required under Section 57 of the Copyright Act, 1957 (India)
+b) Do not copy code without proper licensing rights and attribution
+c) Maintain clear records of code provenance
+d) Plagiarism may constitute copyright infringement under the Copyright Act, 1957 (India) and may result in civil and criminal liability under Sections 63, 63A, and 63B
+e) All redistributions must maintain proper attribution chains
+f) When incorporating code from other FOSS projects:
+   i) Verify license compatibility with the 4License
+   ii) Maintain original copyright notices
+   iii) Document source and license of incorporated code
+   iv) Ensure compliance with original license terms
+g) False attribution may constitute fraud under the Indian Penal Code, 1860 and copyright infringement under the Copyright Act, 1957 (India)
+
+
+=== 13.4 Export Control
+
+Distribution may be subject to the Information Technology Act, 2000 and export control laws of India or other jurisdictions. Users are responsible for compliance.
+
+
+== 14. APPLICATION
+
+To apply the 4License:
+
+1. Include the full license text in a LICENSE file
+2. Add this header to each source file:
+
+Copyright (c) [YEAR] [YOUR NAME/ORGANIZATION]
+Licensed under the 4License
+See LICENSE file for full terms
+SPDX-License-Identifier: 4License
+
+3. Document:
+   - Self-hosting instructions
+   - Dependencies
+   - Build instructions
+   - Analytics collection (if any)
+
+SPDX-License-Identifier: 4License
+
+
+== END OF LICENSE
+

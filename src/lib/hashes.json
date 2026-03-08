@@ -1,0 +1,47 @@
+[
+  {
+    "name": "LICENSE.en-US",
+    "hashes": {
+      "md5": "3fd926b8be32ef7f8eca85e2dec43a72",
+      "sha1": "1d1dec903903b7ca1b027c060d5684a3c2314bb8",
+      "sha256": "81638848ad55f03c469b8aaf62c87a10d26e8d0dd65930634d5d6033002ff2a7",
+      "sha512": "54b226b60bbb93420ace3d1d68e0d64bec0cb4a89aed768768f5d29af22529172a0e0860b4e8dd1da8c64f6aebd7525d560509c010a28090bddafe6c10baf906"
+    }
+  },
+  {
+    "name": "License.en_US.md",
+    "hashes": {
+      "md5": "65e72acd39d80a6c43e4b9870c10d0bc",
+      "sha1": "85106c2ec91122aa632b3384078459c192cf06c1",
+      "sha256": "b3425e9e00cefa9e8d89cddc65921107b6875579a7955662097810ae5426ced7",
+      "sha512": "ee464369b0cea4b9228e8787d61a906ee35b123a58c77b30dec034c6ec0e179c6b3642d03824c5bd303933bc839afc728a1be744cfd822443461bab3ec4584a3"
+    }
+  },
+  {
+    "name": "License.en_US.adoc",
+    "hashes": {
+      "md5": "28aadecc77ba44fac35ac68622296786",
+      "sha1": "578d32b86ad1db546ce5764504d6fed5216e9863",
+      "sha256": "24a98d30d3e9682dafd1ee6daf688b427682a63ae8842623c883aef7a7210b86",
+      "sha512": "a9808eca7d2b0daadbbeb0e3d97c4655ac8077e42c9863aad1b6d60a904d035536e9f9f988f9d0c93ee700c61d10c14510833c7bf7237bf44e9ae55e68819ae4"
+    }
+  },
+  {
+    "name": "License.en_US.tex",
+    "hashes": {
+      "md5": "694de510f11d4cd2b81e17899dfd1c1d",
+      "sha1": "d242a9911f83f63fb325bb7955e83429160eecb8",
+      "sha256": "0194060165949b4e05b8dbbca206ff700a5d8ff13751f52867767fe75fa75b75",
+      "sha512": "7a521a7ee259b8ffb0eb2a4e016c8cac7179fc2eaae0cd88569707e86d89620e7b43dd8fb84498a4ef40c3f619b49fc0236bee5c91e762e127b811f1aeab2c38"
+    }
+  },
+  {
+    "name": "License.en_US.b64",
+    "hashes": {
+      "md5": "7119283189a707f87f08ee399405bf71",
+      "sha1": "4934a5b47f82e504f29d4f4658e50378767a06db",
+      "sha256": "cc38ec0ce735e4641ce401d31e5d084e09c05aaee079a352e03d22efbc2cd50e",
+      "sha512": "a611136272d744652cfd9a35af0b0ac84b22d7566ecdce5b18133721b7a215dfd344ed817cdbe2ad4278edd002568d2457baefbc73c9e364e6a1ed5d63d573de"
+    }
+  }
+]

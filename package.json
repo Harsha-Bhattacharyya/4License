@@ -1,0 +1,33 @@
+{
+  "name": "hopl-website",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "HOPL License website built with SvelteKit and Tailwind CSS",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "node scripts/generate-hashes.js && vite build",
+    "preview": "vite preview",
+    "license:build": "node scripts/license-convert.js",
+    "license:check": "node scripts/license-check.js",
+    "lint": "prettier --check . && eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^3.0.8",
+    "@sveltejs/kit": "^2.16.0",
+    "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-svelte": "^2.46.1",
+    "globals": "^15.14.0",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
+    "prettier-plugin-svelte": "^3.3.3",
+    "svelte": "^5.0.0",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.0.0"
+  }
+}

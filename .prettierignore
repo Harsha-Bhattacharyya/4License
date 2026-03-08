@@ -1,0 +1,11 @@
+# Package
+node_modules
+package-lock.json
+
+# Build
+build
+.svelte-kit
+
+# Generated
+generated
+src/lib/hashes.json
